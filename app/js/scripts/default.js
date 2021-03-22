@@ -1,15 +1,14 @@
+///1cca22df-a320-4624-903d-3cc066c921ad///////////////////////////////
 const submitBtn = document.querySelector(".btn-submit");
 submitBtn.onclick = () => {
-  const loginValue = document.querySelector(".input-login");
-  const passwordValue = document.querySelector(".input-password");
   fetch("https://ajax.test-danit.com/api/v2/cards/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      email: loginValue.value,
-      password: passwordValue.value,
+      email: inputLog.value,
+      password: inputPass.value,
     }),
   })
     .then((response) => {
@@ -17,8 +16,8 @@ submitBtn.onclick = () => {
         alert("Incorrect Login or Password");
         return "noid";
       } else {
+        header.append(btnCreate.render());
         loginButton.style.display = "none";
-        createButton.style.display = "block";
         popup.classList.remove("popup__active");
         return response.text();
       }
@@ -26,6 +25,6 @@ submitBtn.onclick = () => {
     .then((data) => {
       localStorage.setItem("token", data);
     });
-  console.log(loginValue.value);
-  console.log(passwordValue.value);
+  console.log(inputLog.value);
+  console.log(inputPass.value);
 };

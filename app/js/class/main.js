@@ -17,3 +17,20 @@ let container = document.querySelector(".container");
 @@include("input/main.js")
 @@include("label/main.js")
 @@include("request/main.js")
+@@include("select/main.js")
+@@include("options/main.js")
+
+createButton.addEventListener("click", () => {
+  popup.classList.add("popup__active");
+  popupClass.append(chooseDoctors.render());
+  let selectChooseDoctor = document.querySelector(".choose-doctors");
+  selectChooseDoctor.append(optionDefault.render(), optionCardiologist.render(), optionDentist.render(), optionTherapist.render())
+})
+
+if (localStorage.getItem("token")){
+  loginButton.style.display = "none";
+  createButton.style.display = "block";
+  popupClass.textContent= "";
+} else {
+  loginButton.style.display = "block";
+}

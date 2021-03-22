@@ -14,6 +14,8 @@ submitBtn.onclick = () => {
   })
     .then((response) => {
       if (response.status !== 200) {
+        // loginValue.style.borderColor = "red";
+        // passwordValue.style.borderColor = "red";
         alert("Incorrect Login or Password");
         return "noid";
       } else {

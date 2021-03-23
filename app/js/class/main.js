@@ -9,7 +9,7 @@ class Tools {
 }
 
 let header = document.querySelector(".container-header");
-let container = document.querySelector(".container");
+let container = document.body;
 
 @@include("buttons/main.js");
 @@include("modal/main.js");
@@ -19,6 +19,8 @@ let container = document.querySelector(".container");
 @@include("request/main.js");
 @@include("select/main.js");
 @@include("options/main.js");
+@@include("textarea/main.js");
+@@include("filter/main.js");
 
 createButton.addEventListener("click", () => {
   createButton.style.display = "none";

@@ -41,7 +41,13 @@ const modalFooter = new Modal({
   className: "popup-footer modal-footer",
 });
 
+const filterWindow = new Modal({
+  elem: "div",
+  className: "modal modal-filter",
+})
+
 container.append(modalWindow.render());
 let popup = document.querySelector(".background-popup");
 let popupClass = document.querySelector(".popup");
 popupClass.classList.add("modal-dialog", "modal-dialog-centered");
+

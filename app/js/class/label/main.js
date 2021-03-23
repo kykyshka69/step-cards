@@ -15,16 +15,18 @@ class Label extends Tools {
 const labelLogin = new Label({
     elem: "label",
     name: "login-authorization",
-    className: "login-authorization",
+    className: "login-authorization input-group mb-3",
 });
   
 const labelPassword = new Label({
     elem: "label",
     name: "login-authorization",
-    className: "password-authorization",
+    className: "password-authorization input-group mb-3",
 });
 
-formLogin.append(labelLogin.render(), labelPassword.render());
+formLogin.append(modalContainer.render());
+const bodyInput = document.querySelector(".modal-body");
+bodyInput.append(labelLogin.render(), labelPassword.render())
 const labelLog = document.querySelector(".login-authorization");
 labelLog.prepend(inputLogin.render());
 const labelPass = document.querySelector(".password-authorization");

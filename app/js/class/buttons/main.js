@@ -41,12 +41,3 @@ const btnCreate = new Buttons({
   type: "button",
   textContent: "CreateVisit",
 });
-header.append(btnLogin.render());
-let loginButton = document.querySelector(".header-button");
-loginButton.addEventListener('click', () => {
-    popup.classList.add('popup__active');
-    loginButton.style.display = 'none';
-});
-header.append(btnCreate.render());
-let createButton = document.querySelector(".btn-create");
-createButton.style.display = "none";

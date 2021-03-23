@@ -19,11 +19,14 @@ let container = document.querySelector(".container");
 @@include("request/main.js");
 @@include("select/main.js");
 @@include("options/main.js");
-
+@@include("visitDentist/main.js");
+let selectChooseDoctor;
 createButton.addEventListener("click", () => {
+  popupClass.textContent = "";
+  formLogin.textContent = "";
   popup.classList.add("popup__active");
   popupClass.append(chooseDoctors.render());
-  let selectChooseDoctor = document.querySelector(".choose-doctors");
+  selectChooseDoctor = document.querySelector(".choose-doctors");
   selectChooseDoctor.append(
     optionDefault.render(),
     optionCardiologist.render(),
@@ -32,6 +35,14 @@ createButton.addEventListener("click", () => {
   );
 });
 
+document.body.append(chooseUrgency.render());
+const selectUrgency = document.querySelector(".choose-urgency");
+selectUrgency.append(
+  optionDefaultUrgency.render(),
+  optionRegular.render(),
+  optionPriority.render(),
+  optionUrgent.render()
+);
 if (localStorage.getItem("token") !== "noid" && localStorage.getItem("token")) {
   loginButton.style.display = "none";
   createButton.style.display = "block";

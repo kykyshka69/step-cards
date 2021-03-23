@@ -45,13 +45,15 @@ container.append(modalReg.render());
 let regForm = document.querySelector('.reg-form');
 let regLabel = document.querySelector('.regLabel');
 
-const activeReg = document.querySelector('.popup');
 
-
-activeReg.addEventListener('click', () => {
-  regForm.classList.add('form__active');
-});
-
+document.addEventListener('click', function (event) {
+    const select = document.querySelectorAll('.choose-doctors');
+    select.forEach(function (item) {
+        if (event.target === item && item.value !== 'Выбор доктора') {
+          regForm.classList.add('form__active');
+      }
+    })
+  });
 
 
 

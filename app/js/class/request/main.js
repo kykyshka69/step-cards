@@ -22,6 +22,7 @@ submitBtn.onclick = () => {
         loginButton.style.display = "none";
         createButton.style.display = "block";
         popup.classList.remove("popup__active");
+        popupClass.textContent = "";
         return response.text();
       }
     })

@@ -32,3 +32,30 @@ const inputLogin = new Input({
     placeholder: "Your password",
     elem: "input",
   });
+
+
+
+  const inputTarget = new Input ({
+    name: "visit-target",
+    className: "visit__target",
+    type: "text",
+    placeholder: "Your visit target", 
+    elem: 'input'
+  });
+  
+  
+  const inputDescription = new Input ({
+    name: 'Description',
+    className: 'input_description',
+    type: 'text',
+    placeholder: 'Description',
+    elem: 'input'
+  });
+  
+  const inputFullName = new Input ({
+    name: 'fullName',
+    className: 'input-fullName',
+    type: 'text',
+    placeholder: 'Your full name',
+    elem: 'input'
+  });

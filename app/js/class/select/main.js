@@ -11,5 +11,10 @@ class Select extends Tools {
   }
   const chooseDoctors = new Select({
     elem: "select",
-    className: "choose-doctors form-select",
+    className: "choose-doctors form-select mb-3",
+  });
+
+  const chooseUrgency = new Select({
+    elem: "select",
+    className: "choose-urgency form-select mb-3",
   });

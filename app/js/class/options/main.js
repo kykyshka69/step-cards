@@ -37,3 +37,34 @@ class Options extends Tools {
     textContent: "Терапевт",
     className: "qqq",
   });
+
+  const optionDefaultUrgency = new Options({
+    id: "option-default-urgency",
+    elem: "option",
+    textContent: "Срочность",
+    className: "qqq",
+    selected: true,
+    disabled: true,
+  
+  });
+  
+  const optionRegular = new Options({
+    id: "option-regular",
+    elem: "option",
+    textContent: "Обычная",
+    className: "qqq",
+  });
+  
+  const optionPriority = new Options({
+    id: "option-priority",
+    elem: "option",
+    textContent: "Приоритетная",
+    className: "qqq",
+  });
+  
+  const optionUrgent = new Options({
+    id: "option-urgent",
+    elem: "option",
+    textContent: "Неотложная",
+    className: "qqq",
+  });

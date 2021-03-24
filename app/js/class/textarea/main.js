@@ -24,5 +24,3 @@ class textArea extends Tools {
     placeholder: "Введите текст, максимальное кол-во букв 150",
     elem: "textarea",
   });
-  
-//   test.append(modalTextArea.render());

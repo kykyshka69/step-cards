@@ -19,7 +19,7 @@ class Input extends Tools {
 
 const inputLogin = new Input({
     name: "login",
-    className: "input-login",
+    className: "input-login form-control",
     type: "email",
     placeholder: "Your email",
     elem: "input",
@@ -27,7 +27,7 @@ const inputLogin = new Input({
   
   const inputPassword = new Input({
     name: "pasword",
-    className: "input-password",
+    className: "input-password form-control",
     type: "password",
     placeholder: "Your password",
     elem: "input",

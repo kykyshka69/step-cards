@@ -4,29 +4,6 @@
 .background-popup{
     display: none;
     transition: 1s;
-    .popup{
-        margin: 0 auto;
-        position: fixed;
-        top: 40%;
-        right: 0;
-        left: 0;
-        font-size: 14px;
-        max-width: 300px;
-        padding: 15px;
-        border: 1px solid #383838;
-        border-radius: 4px;
-        background-color: #FFFFFF;
-        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
-    }
-    .popup-button__close{
-        cursor: pointer;
-        height: 50px;
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        path{
-            fill: #FFFFFF;
-        }
     }
 }
 
@@ -51,5 +28,3 @@
         box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
     }
 }
-
-

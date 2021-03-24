@@ -13,20 +13,23 @@ submitBtn.onclick = () => {
     }),
   })
     .then((response) => {
-      if (response.status !== 200 ) {
+      if (response.status == 401 ) {
         // loginValue.style.borderColor = "red";
         // passwordValue.style.borderColor = "red";
         alert("Incorrect Login or Password");
         return "noid";
-      } else {
+      } else if (response.status == 200) {
         loginButton.style.display = "none";
         createButton.style.display = "block";
         popup.classList.remove("popup__active");
+        popupClass.textContent = "";
         return response.text();
       }
     })
     .then((data) => {
-      localStorage.setItem("token", data);
+      if (data !== undefined){
+        localStorage.setItem("token", data);
+      }
     });
   console.log(loginValue.value);
   console.log(passwordValue.value);

@@ -37,7 +37,7 @@ const inputLogin = new Input({
 
   const inputTarget = new Input ({
     name: "visit-target",
-    className: "visit__target",
+    className: "visit__target form-control",
     type: "text",
     placeholder: "Your visit target", 
     elem: 'input'
@@ -46,7 +46,7 @@ const inputLogin = new Input({
   
   const inputDescription = new Input ({
     name: 'Description',
-    className: 'input_description',
+    className: 'input_description form-control',
     type: 'text',
     placeholder: 'Description',
     elem: 'input'
@@ -54,7 +54,7 @@ const inputLogin = new Input({
   
   const inputFullName = new Input ({
     name: 'fullName',
-    className: 'input-fullName',
+    className: 'input-fullName form-control',
     type: 'text',
     placeholder: 'Your full name',
     elem: 'input'

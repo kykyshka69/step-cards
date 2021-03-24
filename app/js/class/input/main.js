@@ -19,7 +19,7 @@ class Input extends Tools {
 
 const inputLogin = new Input({
     name: "login",
-    className: "input-login",
+    className: "input-login form-control",
     type: "email",
     placeholder: "Your email",
     elem: "input",
@@ -27,7 +27,7 @@ const inputLogin = new Input({
   
   const inputPassword = new Input({
     name: "pasword",
-    className: "input-password",
+    className: "input-password form-control",
     type: "password",
     placeholder: "Your password",
     elem: "input",
@@ -39,7 +39,7 @@ const inputLogin = new Input({
     name: "visit-target",
     className: "visit__target form-control",
     type: "text",
-    placeholder: "Цель визита", 
+    placeholder: "Your visit target", 
     elem: 'input'
   });
   
@@ -48,7 +48,7 @@ const inputLogin = new Input({
     name: 'Description',
     className: 'input_description form-control',
     type: 'text',
-    placeholder: 'Краткое описание визита',
+    placeholder: 'Description',
     elem: 'input'
   });
   
@@ -56,30 +56,6 @@ const inputLogin = new Input({
     name: 'fullName',
     className: 'input-fullName form-control',
     type: 'text',
-    placeholder: 'ФИО',
-    elem: 'input'
-  });
-
-  const inputPressure = new Input ({
-    name: 'pressure',
-    className: 'input-pressure form-control',
-    type: 'text',
-    placeholder: 'Обычное давление',
-    elem: 'input'
-  });
-
-  const inputWeight = new Input ({
-    name: 'weight',
-    className: 'input-weight form-control',
-    type: 'text',
-    placeholder: 'Индекс массы тела',
-    elem: 'input'
-  });
-
-  const inputAge = new Input ({
-    name: 'age',
-    className: 'input-age form-control',
-    type: 'text',
-    placeholder: 'Возраст',
+    placeholder: 'Your full name',
     elem: 'input'
   });

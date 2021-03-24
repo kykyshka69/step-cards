@@ -16,28 +16,27 @@ class Buttons extends Tools {
 
 const btnLogin = new Buttons({
     elem: "a",
-    className: "header-button",
+    className: "header-button btn btn-primary",
     type: "button",
     textContent: "LOGIN",
   });
 
 const btnSubmit = new Buttons({
   elem: "button",
-  className: "btn-submit",
+  className: "btn btn-submit btn-primary",
   type: "submit",
-  textContent: "submit",
+  textContent: "Submit",
 });
 
 const btnClose = new Buttons({
   elem: "button",
-  className: "btn-close",
-  type: "button",
-  textContent: "close",
+  className: "btn-close close-modal",
+  type: "button"
 });
 
 const btnCreate = new Buttons({
-  elem: "a",
-  className: "btn-create",
+  elem: "button",
+  className: "btn btn-create btn-primary",
   type: "button",
   textContent: "CreateVisit",
 });

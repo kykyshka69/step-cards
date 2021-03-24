@@ -15,16 +15,18 @@ class Label extends Tools {
 const labelLogin = new Label({
     elem: "label",
     name: "login-authorization",
-    className: "login-authorization",
+    className: "login-authorization input-group mb-3",
 });
   
 const labelPassword = new Label({
     elem: "label",
     name: "login-authorization",
-    className: "password-authorization",
+    className: "password-authorization input-group mb-3",
 });
 
-formLogin.append(labelLogin.render(), labelPassword.render());
+formLogin.append(modalContainer.render());
+const bodyInput = document.querySelector(".modal-body");
+bodyInput.append(labelLogin.render(), labelPassword.render())
 const labelLog = document.querySelector(".login-authorization");
 labelLog.prepend(inputLogin.render());
 const labelPass = document.querySelector(".password-authorization");
@@ -54,22 +56,4 @@ const labelTextArea = new Label({
   elem: 'label',
   name: 'label-textarea',
   className: 'label-textarea input-group mb-3'
-})
-
-const pressure = new Label ({
-  elem: 'label',
-  name: 'label-pressure',
-  className: 'label-pressure input-group mb-3'
-})
-
-const labelWeight = new Label ({
-  elem: 'label',
-  name: 'label-weight',
-  className: 'label-weight input-group mb-3'
-})
-
-const age = new Label ({
-  name: 'label',
-  elem: 'label-age',
-  className: 'label-age input-group mb-3'
 })

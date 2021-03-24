@@ -1,62 +1,52 @@
 class Buttons extends Tools {
-  constructor({ elem, className, type, textContent }) {
-    super(elem);
-    this.className = className;
-    this.type = type;
-    this.textContent = textContent;
-  }
-  render() {
-    this.btn = this.createElement();
-    this.btn.className = this.className;
-    this.btn.type = this.type;
-    this.btn.textContent = this.textContent;
-    return this.btn;
-  }
+    constructor({ elem, className, type, textContent }) {
+      super(elem);
+      this.className = className;
+      this.type = type;
+      this.textContent = textContent;
+    }
+    render() {
+      this.btn = this.createElement();
+      this.btn.className = this.className;
+      this.btn.type = this.type;
+      this.btn.textContent = this.textContent;
+      return this.btn;
+    }
 }
 
 const btnLogin = new Buttons({
-  elem: "a",
-  className: "header-button btn btn-primary",
-  type: "button",
-  textContent: "LOGIN",
-});
+    elem: "a",
+    className: "header-button",
+    type: "button",
+    textContent: "LOGIN",
+  });
 
 const btnSubmit = new Buttons({
   elem: "button",
-  className: "btn btn-submit btn-primary",
+  className: "btn-submit",
   type: "submit",
-  textContent: "Submit",
+  textContent: "submit",
 });
 
 const btnClose = new Buttons({
   elem: "button",
-  className: "btn-close close-modal",
+  className: "btn-close",
   type: "button",
+  textContent: "close",
 });
 
 const btnCreate = new Buttons({
-  elem: "button",
-  className: "btn btn-create btn-primary",
+  elem: "a",
+  className: "btn-create",
   type: "button",
   textContent: "CreateVisit",
 });
-
-const btnCreateCards = new Buttons({
-  elem: "button",
-  className: "",
-  type: "button",
-  textContent: "CreateCards",
-});
 header.append(btnLogin.render());
 let loginButton = document.querySelector(".header-button");
-loginButton.addEventListener("click", () => {
-  popup.classList.add("popup__active");
-  loginButton.style.display = "none";
+loginButton.addEventListener('click', () => {
+    popup.classList.add('popup__active');
+    loginButton.style.display = 'none';
 });
 header.append(btnCreate.render());
 let createButton = document.querySelector(".btn-create");
 createButton.style.display = "none";
-
-
-
-

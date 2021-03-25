@@ -22,7 +22,7 @@ let container = document.body;
 @@include("options/main.js");
 @@include("textarea/main.js");
 @@include("filter/main.js");
-
+let selectChooseDoctor;
 createButton.addEventListener("click", () => {
   createButton.style.display = "none";
   popup.classList.add("popup__active");
@@ -44,7 +44,7 @@ createButton.addEventListener("click", () => {
   createBodyClass.append(chooseDoctors.render())
   createContentClass.append(modalFooter.render());
   const createFooterClass = document.querySelector(".popup-footer");
-  let selectChooseDoctor = document.querySelector(".choose-doctors");
+  selectChooseDoctor = document.querySelector(".choose-doctors");
   selectChooseDoctor.append(
     optionDefault.render(),
     optionCardiologist.render(),

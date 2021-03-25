@@ -75,3 +75,9 @@ const age = new Label ({
   elem: 'label-age',
   className: 'label-age input-group mb-3'
 })
+
+const date = new Label ({
+  name: 'label',
+  elem: 'label-date',
+  className: 'label-date input-group mb-3'
+})

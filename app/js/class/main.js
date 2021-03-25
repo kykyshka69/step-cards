@@ -44,6 +44,9 @@ createButton.addEventListener("click", () => {
   createBodyClass.append(chooseDoctors.render())
   createContentClass.append(modalFooter.render());
   const createFooterClass = document.querySelector(".popup-footer");
+  createFooterClass.append(btnSubmit.render());  
+  document.querySelector('.btn-submit').style.display = 'none';
+
   selectChooseDoctor = document.querySelector(".choose-doctors");
   selectChooseDoctor.append(
     optionDefault.render(),

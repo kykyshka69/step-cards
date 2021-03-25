@@ -40,6 +40,9 @@ const btnCreate = new Buttons({
   type: "button",
   textContent: "CreateVisit",
 });
+
+
+
 header.append(btnLogin.render());
 let loginButton = document.querySelector(".header-button");
 loginButton.addEventListener('click', () => {

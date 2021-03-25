@@ -16,7 +16,7 @@ class Visited {
     }
 }
 
-  const test = new Visited();
+  const generalVisit = new Visited();
 //   console.log(test.render());
 
   class Cardiolog extends Visited {
@@ -37,5 +37,34 @@ class Visited {
       }
   }
 
-const testss = new Cardiolog();
-console.log(testss.render());
+const cardiolog = new Cardiolog();
+console.log(cardiolog.render());
+
+class Terapevt extends Visited{
+  constructor() {
+    super()
+  } 
+    render () {
+    formLogin.append(age.render());
+    const ageLabel = document.querySelector('.label-age');
+        ageLabel.append(inputAge.render());
+        return formLogin
+  }
+}
+
+const terapevt = new Terapevt();
+
+
+class Dantist extends Visited {
+  constructor () {
+    super()
+  } 
+  render () {
+    formLogin.append(date.render())
+    const dateLabel = document.querySelector('.label-date');
+    dateLabel.append(inputDate.render());
+    return formLogin
+  }
+}
+
+const dantist = new Dantist();

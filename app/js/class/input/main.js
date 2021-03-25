@@ -83,3 +83,11 @@ const inputLogin = new Input({
     placeholder: 'Возраст',
     elem: 'input'
   });
+
+  const inputDate = new Input ({
+    name: 'date',
+    className: 'input-date form-control',
+    type: 'text',
+    placeholder: 'Дата последнего визита',
+    elem: 'input'
+  })

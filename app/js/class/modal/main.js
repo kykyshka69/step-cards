@@ -53,70 +53,27 @@ let popupClass = document.querySelector(".popup");
 popupClass.classList.add("modal-dialog", "modal-dialog-centered");
 
 
-
-
-
-
-document.addEventListener('click', function (event) {
-    // const select = document.querySelectorAll('.choose-doctors');
-    // select.forEach(function (item) {
-      console.log(event.target);
-      const modalBodyClass = document.querySelector(".popup-body");
-      console.log(document.querySelector(".choose-doctors").value);
-        if (event.target === document.querySelector(".choose-doctors") && document.querySelector(".choose-doctors").value !== 'Выбор доктора') {
-          modalBodyClass.append(formLogin);
-          formLogin.textContent = '';
-          formLogin.append(test.render());
-        }  else if (event.target === document.querySelector('.choose-doctors').value('Кардиолог')) {
-          modalBodyClass.append(formLogin);
-          formLogin.textContent = '';
-          formLogin.append(testss.render())
-        }})
-        
-        // const labelTargetClass = document.querySelector(".visit-target");
-        // labelTargetClass.append(inputTarget.render());
-        // const labelDescriptionClass = document.querySelector(".description");
-        // labelDescriptionClass.append(inputDescription.render());
-        // modalBodyClass.append(chooseUrgency.render());
-        // const selectUrgency = document.querySelector(".choose-urgency");
-        // selectUrgency.append(optionDefaultUrgency.render(), optionRegular.render(), optionPriority.render(), optionUrgent.render());
-        // const labelNameClass = document.querySelector(".full-name");
-        // labelNameClass.append(inputFullName.render());
-        // check = 1;
-        // check++;
-        // console.log(check);
-    //   } if (event.target === item && item.value == 'Кардиолог') {
-    //     const modalBodyClass = document.querySelector(".popup-body");
-    //     modalBodyClass.append(formLogin)
-    //     formLogin.textContent = '';
-    //     formLogin.append(pressure.render(), labelWeight.render(), age.render(), labelTextArea.render());
-    //     const labelTextAreaClass = document.querySelector(".label-textarea");
-    //     labelTextAreaClass.append(modalTextArea.render());
-    //     const pressureLabel = document.querySelector(".label-pressure");
-    //     pressureLabel.append(inputPressure.render());
-    //     const weightLabel = document.querySelector('.label-weight');
-    //     weightLabel.append(inputWeight.render())
-    //     const ageLabel = document.querySelector('.label-age');
-    //     ageLabel.append(inputAge.render());
-    //     check = 1;
-    //     console.log(check);
-    //   } else if (event.target === item && item.value == 'Выбор доктора') {
-    //     const w = document.querySelector('.label-weight');
-    //     const ta = document.querySelector(".label-textarea");
-    //     const pr = document.querySelector(".label-pressure");
-    //     const age = document.querySelector('.label-age');
-    //     const name = document.querySelector(".full-name");
-    //     const select = document.querySelector(".choose-urgency");
-    //     const desc = document.querySelector(".description");
-    //     const tar = document.querySelector(".visit-target");
-    //     const arr = [w, ta, pr, age, name, select, desc, tar];
-    //     arr.forEach(function (i) {
-    //       i.style.display = 'none';
-    //     })
-    //     check = 0;
-    //     console.log(check);
-    //   }
-    // })
-
+document.body.addEventListener('change', function (event) {
+      if (event.target === document.querySelector(".choose-doctors") && document.querySelector(".choose-doctors").value !== 'Выбор доктора') {
+    const modalBodyClass = document.querySelector(".popup-body");
+    formLogin.textContent = '';
+    modalBodyClass.append(formLogin);
+    generalVisit.render();
+    document.querySelector('.btn-submit').style.display = 'block';
+  }   if (event.target === document.querySelector(".choose-doctors") && document.querySelector(".choose-doctors").value === 'Кардиолог') {
+    // modalBodyClass.append(formLogin);
+    formLogin.textContent = '';
+    generalVisit.render();
+    cardiolog.render()
+  }   if (event.target === document.querySelector(".choose-doctors") && document.querySelector(".choose-doctors").value === 'Терапевт') {
+    formLogin.textContent = '';
+    generalVisit.render();
+    terapevt.render()
+  }   if (event.target === document.querySelector(".choose-doctors") && document.querySelector(".choose-doctors").value === 'Стоматолог') {
+    formLogin.textContent = '';
+    generalVisit.render();
+    dantist.render();
+  }
+})
 
 

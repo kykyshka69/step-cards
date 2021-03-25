@@ -57,3 +57,21 @@ const labelTextArea = new Label({
   name: 'label-textarea',
   className: 'label-textarea input-group mb-3'
 })
+
+const pressure = new Label ({
+  elem: 'label',
+  name: 'label-pressure',
+  className: 'label-pressure input-group mb-3'
+})
+
+const labelWeight = new Label ({
+  elem: 'label',
+  name: 'label-weight',
+  className: 'label-weight input-group mb-3'
+})
+
+const age = new Label ({
+  name: 'label',
+  elem: 'label-age',
+  className: 'label-age input-group mb-3'
+})

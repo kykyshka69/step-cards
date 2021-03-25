@@ -33,16 +33,13 @@ const inputLogin = new Input({
     elem: "input",
   });
 
-
-
   const inputTarget = new Input ({
     name: "visit-target",
     className: "visit__target form-control",
     type: "text",
     placeholder: "Цель визита", 
-    elem: 'input'
+    elem: 'input',
   });
-  
   
   const inputDescription = new Input ({
     name: 'Description',

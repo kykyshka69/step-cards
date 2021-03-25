@@ -52,11 +52,6 @@ let popup = document.querySelector(".background-popup");
 let popupClass = document.querySelector(".popup");
 popupClass.classList.add("modal-dialog", "modal-dialog-centered");
 
-
-
-
-
-
 document.addEventListener('click', function (event) {
     const select = document.querySelectorAll('.choose-doctors');
     select.forEach(function (item) {
@@ -99,7 +94,7 @@ document.addEventListener('click', function (event) {
         const tar = document.querySelector(".visit-target");
         const arr = [w, ta, pr, age, name, select, desc, tar];
         arr.forEach(function (i) {
-          i.style.display = 'none';
+          // i.style.display = 'none';
         })
         check = 0;
         console.log(check);

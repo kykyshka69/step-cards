@@ -26,6 +26,7 @@ let selectChooseDoctor;
 createButton.addEventListener("click", () => {
   createButton.style.display = "none";
   popup.classList.add("popup__active");
+  popupClass.classList.add("modal-dialog-scrollable", "modal-scrollbar");
   popupClass.append(formAuthorization.render())
   let formClass = document.querySelector(".popup-form");
   formClass.append(ModalContent.render());

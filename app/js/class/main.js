@@ -21,12 +21,16 @@ let container = document.body;
 @@include("options/main.js");
 @@include("textarea/main.js");
 @@include("filter/main.js");
-@@include("VisitTherapist/main.js");
+
+
 let selectChooseDoctor;
 createButton.addEventListener("click", () => {
   createButton.style.display = "none";
   popup.classList.add("popup__active");
-  popupClass.append(ModalContent.render());
+  popupClass.classList.add("modal-dialog-scrollable", "modal-scrollbar");
+  popupClass.append(formAuthorization.render())
+  let formClass = document.querySelector(".popup-form");
+  formClass.append(ModalContent.render());
   const createContentClass = document.querySelector(".popup-create-content");
   createContentClass.append(modalHeader.render());
   const createHeaderClass = document.querySelector(".popup-header");
@@ -36,18 +40,19 @@ createButton.addEventListener("click", () => {
   );
   createHeaderClass.append(btnClose.render());
   let closeModal = document.querySelector(".close-modal");
-  console.log(closeModal);
-  closeModal.addEventListener("click", () => {
-    popup.classList.remove("popup__active");
+
+  closeModal.addEventListener('click', () => {
+    popup.classList.remove('popup__active');
     popupClass.textContent = "";
     createButton.style.display = "block";
   });
   createContentClass.append(modalBody.render());
   const createBodyClass = document.querySelector(".popup-body");
   createBodyClass.append(chooseDoctors.render());
-  // createContentClass.append(modalFooter.render());
-  // const createFooterClass = document.querySelector(".popup-footer");
-  selectChooseDoctor = document.querySelector(".choose-doctors");
+  createContentClass.append(modalFooter.render());
+  const createFooterClass = document.querySelector(".popup-footer");
+  createFooterClass.append(btnSubmit.render());
+   selectChooseDoctor = document.querySelector(".choose-doctors");
   selectChooseDoctor.append(
     optionDefault.render(),
     optionCardiologist.render(),

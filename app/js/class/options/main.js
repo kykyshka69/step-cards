@@ -1,6 +1,7 @@
 class Options extends Tools {
-  constructor({ elem, className, disabled, textContent, selected }) {
+  constructor({ elem, id, className, disabled, textContent, selected }) {
     super(elem);
+    this.id = id;
     this.className = className;
     this.disabled = disabled;
     this.textContent = textContent;
@@ -8,6 +9,7 @@ class Options extends Tools {
   }
   render() {
     this.option = this.createElement();
+    this.option.id = this.id;
     this.option.className = this.className;
     this.option.disabled = this.disabled;
     this.option.textContent = this.textContent;
@@ -16,46 +18,27 @@ class Options extends Tools {
   }
 }
 const optionDefault = new Options({
+  id: "select",
   elem: "option",
   textContent: "Выбор доктора",
-  className: "",
+  className: "select",
   selected: true,
   disabled: true,
 });
 const optionCardiologist = new Options({
   elem: "option",
   textContent: "Кардиолог",
-  className: "",
+  className: "cardiolog",
 });
 const optionDentist = new Options({
   elem: "option",
   textContent: "Стоматолог",
-  className: "",
+  className: "dentist",
 });
 const optionTherapist = new Options({
   elem: "option",
   textContent: "Терапевт",
-  className: "test",
-});
-
-const optionDefaultUrgency = new Options({
-  elem: "option",
-  textContent: "Срочность",
-  className: "",
-  selected: true,
-  disabled: true,
-});
-
-const optionRegular = new Options({
-  elem: "option",
-  textContent: "Обычная",
-  className: "",
-});
-
-const optionPriority = new Options({
-  elem: "option",
-  textContent: "Приоритетная",
-  className: "",
+  className: "therapist",
 });
 
 const optionUrgent = new Options({

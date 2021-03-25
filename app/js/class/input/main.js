@@ -25,29 +25,30 @@ const inputLogin = new Input({
   elem: "input",
 });
 
-const inputPassword = new Input({
-  name: "pasword",
-  className: "input-password form-control",
-  type: "password",
-  placeholder: "Your password",
-  elem: "input",
-});
 
-const inputTarget = new Input({
-  name: "visit-target",
-  className: "visit__target form-control",
-  type: "text",
-  placeholder: "Your visit target",
-  elem: "input",
-});
+  const inputTarget = new Input ({
+    name: "visit-target",
+    className: "visit__target form-control",
+    type: "text",
+    placeholder: "Цель визита",
+    elem: 'input',
+  });
 
-const inputDescription = new Input({
-  name: "Description",
-  className: "input_description form-control",
-  type: "text",
-  placeholder: "Description",
-  elem: "input",
-});
+  const inputDescription = new Input ({
+    name: 'Description',
+    className: 'input_description form-control',
+    type: 'text',
+    placeholder: 'Краткое описание визита',
+    elem: 'input'
+  });
+
+  const inputFullName = new Input ({
+    name: 'fullName',
+    className: 'input-fullName form-control',
+    type: 'text',
+    placeholder: 'ФИО',
+    elem: 'input'
+  });
 
 const inputFullName = new Input({
   name: "fullName",

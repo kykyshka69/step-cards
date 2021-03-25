@@ -34,4 +34,3 @@ closeButton.addEventListener('click', () => {
     popup.classList.remove('popup__active');
     loginButton.style.display = 'block';
 });
-

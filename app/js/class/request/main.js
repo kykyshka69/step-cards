@@ -9,13 +9,12 @@ submitBtn.onclick = () => {
     },
     body: JSON.stringify({
       email: loginValue.value,
-      password: passwordValue.value,
+      password: passwordValue.nvalue,
     }),
   })
     .then((response) => {
+      console.log(response.status);
       if (response.status == 401 ) {
-        // loginValue.style.borderColor = "red";
-        // passwordValue.style.borderColor = "red";
         alert("Incorrect Login or Password");
         return "noid";
       } else if (response.status == 200) {

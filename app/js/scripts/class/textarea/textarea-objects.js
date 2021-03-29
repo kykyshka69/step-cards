@@ -1,4 +1,4 @@
-const textAreaClass = new textArea({
+const textAreaClass = new TextArea({
     name: "textarea",
     className: "modal-textarea form-control",
     textarea: "150",

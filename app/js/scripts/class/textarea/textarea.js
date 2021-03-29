@@ -1,4 +1,4 @@
-class textArea extends Tools {
+class TextArea extends Tools {
     constructor({ elem, name, className, maxlength, placeholder }) {
       super(elem);
       (this.name = name),

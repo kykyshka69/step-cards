@@ -40,6 +40,24 @@ const labelTextAreaClass = new Label({
     className: "label-textarea input-group mb-3",
 });
 
+const labelPressureClass = new Label({
+    elem: "label",
+    name: "label-pressure",
+    className: "label-pressure input-group mb-3",
+  });
+  
+  const labelWeightClass = new Label({
+    elem: "label",
+    name: "label-weight",
+    className: "label-weight input-group mb-3",
+  });
+
+  const labelDateClass = new Label({
+    name: "label-date",
+    elem: "label",
+    className: "label-date input-group mb-3",
+  });
+
 const labelLoginElement = labelLoginClass.render();
 const labelPasswordElement = labelPasswordClass.render();
 const labelAgeElement = labelAgeClass.render();
@@ -47,5 +65,6 @@ const labelTargetElement = labelTargetClass.render();
 const labelDescriptionElement = labelDescriptionClass.render();
 const labelFullNameElement = labelFullNameClass.render();
 const labelTextAreaElement = labelTextAreaClass.render();
-
-
+const labelPressureElement = labelPressureClass.render();
+const labelWeightElement = labelWeightClass.render();
+const labelDateElement = labelDateClass.render();

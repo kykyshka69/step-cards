@@ -3,7 +3,7 @@ class Tools {
     this.elem = elem;
     this.className = className;
   }
-  render() {
+  createElement() {
     let elem = document.createElement(`${this.elem}`);
     return elem;
   }

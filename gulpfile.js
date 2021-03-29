@@ -32,7 +32,7 @@ function scss() {
 };
 
 function js() {
-    return src('app/js/main.js')
+    return src('app/js/general.js')
         .pipe(include({
             prefix: '@@'
         }))

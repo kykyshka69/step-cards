@@ -1,4 +1,4 @@
-class Visited {
+class Visit {
   constructor() {}
   render() {
     formElement.append(

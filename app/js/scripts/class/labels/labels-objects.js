@@ -52,7 +52,7 @@ const labelPressureClass = new Label({
     className: "label-weight input-group mb-3",
   });
 
-  const labelDateClass = new Label({
+  const labelLastVisitClass = new Label({
     name: "label-date",
     elem: "label",
     className: "label-date input-group mb-3",
@@ -67,4 +67,4 @@ const labelFullNameElement = labelFullNameClass.render();
 const labelTextAreaElement = labelTextAreaClass.render();
 const labelPressureElement = labelPressureClass.render();
 const labelWeightElement = labelWeightClass.render();
-const labelDateElement = labelDateClass.render();
+const labelLastVisitElement = labelLastVisitClass.render();

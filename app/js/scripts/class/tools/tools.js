@@ -5,7 +5,7 @@ class Tools {
   }
   createElement() {
     let elem = document.createElement(`${this.elem}`);
+    this.elem.className = this.className;
     return elem;
   }
 }
-

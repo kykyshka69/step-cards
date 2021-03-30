@@ -11,7 +11,9 @@ function getCard() {
     })
     .then((data) => {
       const main = document.querySelector(".main-container");
-      data.map((item, i) => {
+      main.className = "row";
+      data.forEach((item, i) => {
+        console.log(item)
         const {
           doctor = "",
           purpose = "",
@@ -37,19 +39,23 @@ function getCard() {
         const cardElement = cardClass.render();
         cardElement.style.width = "18rem";
         const cardBodyElement = cardClass.renderCardBody();
+        const cardBodyElement__Button = cardClass.renderCardBody();
+        cardBodyElement__Button.className = "d-grid gap-2 mx-auto"
         const cardTitleElement = cardClass.renderCardTitle();
         const cardSubtitleElement = cardClass.renderCardSubtitle();
         const buttonEditElement = buttonEditClass.render();
         const buttonShowMoreElement = buttonShowMoreClass.render();
         main.append(cardElement);
         cardElement.append(cardBodyElement);
-
+        cardElement.append(cardBodyElement__Button);
         cardBodyElement.append(
           cardTitleElement,
           cardSubtitleElement,
+        );
+        cardBodyElement__Button.append(
           buttonShowMoreElement,
           buttonEditElement
-        );
+        )
         cardTitleElement.textContent = doctor;
         cardSubtitleElement.textContent = fullName;
         arr.forEach((el, i) => {

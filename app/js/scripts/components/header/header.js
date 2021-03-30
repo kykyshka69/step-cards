@@ -12,20 +12,6 @@ buttonLoginElement.onclick = () => {
   buttonCreateElement.style.display = "none";
 };
 
-buttonCloseElement.onclick = (e) => {
-  document.querySelector(".background-popup").classList.remove("popup__active");
-  document.body.style.background = "";
-
-  if (
-    localStorage.getItem("token") !== "noid" &&
-    localStorage.getItem("token")
-  ) {
-    buttonCreateElement.style.display = "block";
-  } else {
-    buttonLoginElement.style.display = "block";
-  }
-};
-
 buttonCreateElement.onclick = (e) => {
   document.querySelector(".background-popup").classList.add("popup__active");
   document.querySelector(".modal-body").innerHTML = "";

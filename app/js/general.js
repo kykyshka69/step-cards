@@ -29,6 +29,7 @@
 @@include("scripts/components/header/header.js");
 @@include("scripts/components/main/main.js");
 @@include("scripts/components/footer/footer.js");
+@@include("scripts/components/modal/modal.js");
 @@include("scripts/request/request-login.js");
 
 if (localStorage.getItem("token") !== "noid" && localStorage.getItem("token")) {

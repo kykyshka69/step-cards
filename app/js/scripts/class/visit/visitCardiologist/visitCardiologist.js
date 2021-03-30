@@ -3,7 +3,7 @@ class VisitCardiologist extends Visit {
       super();
     }
     render() {
-    formElement.append(
+      fromCreateElement.append(
         labelPressureElement,
         labelWeightElement,
         labelAgeElement,
@@ -13,6 +13,6 @@ class VisitCardiologist extends Visit {
     labelTextAreaElement.append(textAreaClass.render());
     labelWeightElement.append(inputWeightClass.render());
     labelAgeElement.append(inputAgeClass.render());
-      return formElement;
+      return fromCreateElement;
     }
   }

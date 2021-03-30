@@ -68,3 +68,6 @@ const labelTextAreaElement = labelTextAreaClass.render();
 const labelPressureElement = labelPressureClass.render();
 const labelWeightElement = labelWeightClass.render();
 const labelLastVisitElement = labelLastVisitClass.render();
+
+document.querySelector(".modal-body").append(labelLoginElement);
+document.querySelector(".modal-body").append(labelPasswordElement);

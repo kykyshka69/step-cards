@@ -3,9 +3,9 @@ class VisitTherapist extends Visit {
       super();
     }
     render() {
-      formElement.append(labelAgeElement);
+      fromCreateElement.append(labelAgeElement);
       labelAgeElement.append(inputAgeClass.render());
   
-      return formElement;
+      return fromCreateElement;
     }
   }

@@ -6,6 +6,14 @@ const inputLoginClass = new Input({
   elem: "input",
 });
 
+const inputPasswordClass = new Input({
+  name: "passoword",
+  className: "input-password form-control",
+  type: "password",
+  placeholder: "Your password",
+  elem: "input",
+});
+
 const inputTargetClass = new Input({
   name: "visit-target",
   className: "visit__target form-control",
@@ -63,6 +71,7 @@ const inputLastVisitClass = new Input({
 });
 
 const inputLoginElement = inputLoginClass.render();
+const inputPasswordElement = inputPasswordClass.render();
 const inputTargetElement = inputTargetClass.render();
 const inputDescriptionElement = inputDescriptionClass.render();
 const inputFullNameElement = inputFullNameClass.render();
@@ -70,3 +79,6 @@ const inputAgeElement = inputAgeClass.render();
 const inputPressureElement = inputPressureClass.render();
 const inputWeightElement = inputWeightClass.render();
 const inputLastVisitElement = inputLastVisitClass.render();
+
+labelLoginElement.append(inputLoginElement);
+labelPasswordElement.append(inputPasswordElement);

@@ -3,8 +3,8 @@ class VisitDentist extends Visit {
     super();
   }
   render() {
-    formElement.append(labelLastVisitElement);
+    fromCreateElement.append(labelLastVisitElement);
     labelLastVisitElement.append(inputLastVisitElement);
-    return formElement;
+    return fromCreateElement;
   }
 }

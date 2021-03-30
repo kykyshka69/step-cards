@@ -13,6 +13,7 @@ function getCard() {
       const main = document.querySelector(".main-container");
 
       data.forEach((item, i) => {
+        console.log(item)
         const {
           doctor = "",
           purpose = "",
@@ -26,10 +27,13 @@ function getCard() {
           lastVisit = "",
           id,
         } = item;
-        const cardBodyElement = cardBodyClass.render();
-        const cardTitleElement = cardBodyClass.renderCardTitle();
-        const cardSubtitleElement = cardBodyClass.renderCardSubtitle();
-        main.append(cardBodyElement);
+        const cardElement = cardClass.render();
+        cardElement.style.width = "18rem";
+        const cardBodyElement = cardClass.renderCardBody();
+        const cardTitleElement = cardClass.renderCardTitle();
+        const cardSubtitleElement = cardClass.renderCardSubtitle();
+        main.append(cardElement);
+        cardElement.append(cardBodyElement);
         cardBodyElement.append(
           cardTitleElement,
           cardSubtitleElement,

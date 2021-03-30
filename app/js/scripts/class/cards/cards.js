@@ -6,8 +6,13 @@ class Cards extends Tools {
   render() {
     const cardBody = this.createElement();
     cardBody.className = this.className;
-
     return cardBody;
+  }
+
+  renderCardBody(){
+    const card = document.createElement("div");
+    card.className = "card-body";
+    return card;
   }
   renderCardTitle() {
     const cardTitle = document.createElement("h5");

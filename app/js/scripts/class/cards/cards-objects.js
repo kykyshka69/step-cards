@@ -1,2 +1,3 @@
-const cardBodyClass = new Cards({ elem: "div", className: "card-body" });
-const cardBodyElement = cardBodyClass.render();
+const cardClass = new Cards({ elem: "div", className: "card" });
+
+const cardElement = cardClass.render();

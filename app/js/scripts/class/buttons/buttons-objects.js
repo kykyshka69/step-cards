@@ -49,5 +49,5 @@ const buttonSubmitElement = buttonSubmitClass.render();
 const buttonCloseElement = buttonCloseClass.render();
 const buttonCreateElement = buttonCreateClass.render();
 const buttonPostElement = buttonPostClass.render();
-// const buttonShowMoreElement = buttonShowMoreClass.render();
-// const buttonEditElement = buttonEditClass.render();
+const buttonShowMoreElement = buttonShowMoreClass.render();
+const buttonEditElement = buttonEditClass.render();

@@ -37,11 +37,14 @@ function getCard() {
         cardBodyElement.append(
           cardTitleElement,
           cardSubtitleElement,
-          buttonShowMoreClass.render(),
-          buttonEditClass.render()
+          cardTextElement,
+          buttonShowMoreElement,
+          buttonEditElement
         );
         cardTitleElement.textContent = doctor;
         cardSubtitleElement.textContent = fullName;
+
+        buttonShowMoreElement.onclick = () => {};
       });
     });
 }

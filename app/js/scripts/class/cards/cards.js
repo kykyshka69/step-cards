@@ -11,7 +11,7 @@ class Cards extends Tools {
 
   renderCardBody() {
     const card = document.createElement("div");
-    card.className = "card-body";
+    card.className = "card-body col";
     return card;
   }
   renderCardTitle() {

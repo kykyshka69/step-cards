@@ -33,7 +33,7 @@ const buttonPostClass = new Buttons({
 });
 const buttonShowMoreClass = new Buttons({
   elem: "button",
-  className: "btn btn-show-more btn-primary btn-sm",
+  className: "btn btn-primary btn-sm mb-1",
   type: "button",
   textContent: "Показать больше",
 });
@@ -47,8 +47,7 @@ const buttonHideInfoClass = new Buttons({
 
 const buttonEditClass = new Buttons({
   elem: "button",
-  className: "btn btn-edit-more btn-primary btn-sm",
-  className: "btn btn-primary btn-sm",
+  className: "btn btn-primary btn-sm mb-2",
   type: "button",
   textContent: "Редактировать",
 });

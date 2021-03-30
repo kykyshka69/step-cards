@@ -11,7 +11,7 @@ function getCard() {
     })
     .then((data) => {
       const main = document.querySelector(".main-container");
-      main.className = "row";
+      main.className = "row justify-content-md-center gap-auto";
       data.forEach((item, i) => {
         const {
           doctor = "",
@@ -38,8 +38,10 @@ function getCard() {
         const cardElement = cardClass.render();
         cardElement.style.width = "18rem";
         const cardBodyElement = cardClass.renderCardBody();
+        const cardBodyElement__Content = cardClass.renderCardBody();
+        cardBodyElement.insertAdjacentElement("afterend", cardBodyElement__Content);
         const cardBodyElement__Button = cardClass.renderCardBody();
-        cardBodyElement__Button.className = "d-grid gap-2";
+        cardBodyElement__Button.className = "d-grid gap-2"
         const cardTitleElement = cardClass.renderCardTitle();
         const cardSubtitleElement = cardClass.renderCardSubtitle();
         const buttonEditElement = buttonEditClass.render();

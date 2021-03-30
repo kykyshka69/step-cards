@@ -19,3 +19,9 @@ buttonCloseElement.onclick = (e) => {
 
 }
 
+buttonCreateElement.onclick = () => {
+  const bodyClass = document.body;
+  bodyClass.append(modalCreateElement);
+  modalCreateElement.classList.add("popup__active");
+}
+

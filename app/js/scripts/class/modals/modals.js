@@ -1,7 +1,8 @@
 class Modal extends Tools {
-  constructor({ elem, className }) {
+  constructor({ elem, className, form}) {
     super(elem);
     this.className = className;
+    this.form = form;
   }
   render() {
     this.div = this.createElement();
@@ -12,10 +13,12 @@ class Modal extends Tools {
 
   renderContainerModal() {
     const container = this.createElement("div");
+    // const formElement = this.form;
+    console.log(this.form)
     container.className = "popup-create-content modal-dialog modal-dialog-centered";
     container.append(
-      formElement
-    );
+      this.form
+      );
     return container;
   }
 }

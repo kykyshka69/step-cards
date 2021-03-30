@@ -32,15 +32,15 @@ const buttonPostClass = new Buttons({
   textContent: "Создать Визит",
 });
 const buttonShowMoreClass = new Buttons({
-  elem: "button",
-  className: "btn btn-show-more btn-primary",
+  elem: "a",
+  className: "card-link",
   type: "button",
   textContent: "Показать больше",
 });
 
 const buttonEditClass = new Buttons({
-  elem: "button",
-  className: "btn btn-edit btn-primary",
+  elem: "a",
+  className: "card-link",
   type: "button",
   textContent: "Редактировать",
 });

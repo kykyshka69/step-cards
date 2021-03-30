@@ -32,18 +32,18 @@ function getCard() {
         const cardBodyElement = cardClass.renderCardBody();
         const cardTitleElement = cardClass.renderCardTitle();
         const cardSubtitleElement = cardClass.renderCardSubtitle();
+        const buttonEditElement = buttonEditClass.render();
+        const buttonShowMoreElement = buttonShowMoreClass.render();
         main.append(cardElement);
         cardElement.append(cardBodyElement);
         cardBodyElement.append(
           cardTitleElement,
           cardSubtitleElement,
-          cardTextElement,
           buttonShowMoreElement,
           buttonEditElement
         );
         cardTitleElement.textContent = doctor;
         cardSubtitleElement.textContent = fullName;
-
         buttonShowMoreElement.onclick = () => {};
       });
     });

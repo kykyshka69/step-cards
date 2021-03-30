@@ -21,7 +21,7 @@ class Cards extends Tools {
   }
   renderCardSubtitle() {
     const cardSubtitle = document.createElement("h6");
-    cardSubtitle.className = "card-Subtitle";
+    cardSubtitle.className = "card-subtitle mb-2 text-muted";
     return cardSubtitle;
   }
   renderCardText() {

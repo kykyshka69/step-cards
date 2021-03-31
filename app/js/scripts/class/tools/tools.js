@@ -1,15 +1,21 @@
 class Tools {
   constructor(elem) {
     this.elem = elem;
+
   }
   createElement() {
     let elem = document.createElement(`${this.elem}`);
     return elem;
   }
 
+  createFilter(){
+    let elem = document.createElement(`${this.elem}`);
+    elem.className = "mt-5 card mb-2";
+    return elem;
+  }
   renderPage() {
     const wrapper = this.createElement("div");
-    wrapper.className = "header navbar navbar-expand-lg navbar-light bg-light";
+    wrapper.className = "header shadow navbar navbar-expand-lg navbar-light bg-light";
     wrapper.append(this.renderHeader());
     return wrapper;
   }

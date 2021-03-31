@@ -33,24 +33,39 @@ const buttonPostClass = new Buttons({
 });
 const buttonShowMoreClass = new Buttons({
   elem: "button",
-  className: "btn btn-primary btn-sm mb-1",
+  className: "btn btn-primary mb-1",
   type: "button",
-  textContent: "Показать больше",
+  textContent: "Show More",
 });
 
 const buttonHideInfoClass = new Buttons({
   elem: "button",
-  className: "btn btn-hide-info hide btn-primary btn-sm",
+  className: "btn btn-hide-info hide btn-primary",
   type: "button",
-  textContent: "Скрить",
+  textContent: "Hide",
 });
 
 const buttonEditClass = new Buttons({
   elem: "button",
-  className: "btn btn-primary btn-sm mb-2",
+  className: "btn btn-light mb-2",
   type: "button",
-  textContent: "Редактировать",
+  textContent: "Edit",
 });
+
+const buttonDeleteClass = new Buttons({
+  elem: "button",
+  className: "btn btn-danger mb2",
+  type: "button",
+  textContent: "Delete"
+})
+
+const buttonEditCardClass = new Buttons({
+  elem: "button",
+  className: "btn btn-primary mb-2",
+  type: "button",
+  textContent: "Edit",
+});
+
 const buttonLoginElement = buttonLoginClass.render();
 const buttonSubmitElement = buttonSubmitClass.render();
 const buttonCloseElement = buttonCloseClass.render();
@@ -59,3 +74,5 @@ const buttonPostElement = buttonPostClass.render();
 const buttonShowMoreElement = buttonShowMoreClass.render();
 const buttonEditElement = buttonEditClass.render();
 const buttonHideInfoElement = buttonHideInfoClass.render();
+const buttonDeleteElement = buttonDeleteClass.render();
+const buttonEditCardElement = buttonEditCardClass.render();

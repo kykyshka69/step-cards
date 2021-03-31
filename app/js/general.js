@@ -7,6 +7,7 @@
 @@include("scripts/class/labels/labels.js");
 @@include("scripts/class/textarea/textarea.js");
 @@include("scripts/class/selects/selects.js");
+@@include("scripts/class/cards/cards.js");
 @@include("scripts/class/visit/visit.js");
 @@include("scripts/class/visit/visitCardiologist/visitCardiologist.js");
 @@include("scripts/class/visit/visitDentist/visitDentist.js");
@@ -25,6 +26,7 @@
 @@include("scripts/class/visit/visitDentist/visitDentist-objects.js");
 @@include("scripts/class/visit/visitTherapist/visitTherapist-objects.js");
 @@include("scripts/class/tools/tools-objects.js");
+@@include("scripts/class/cards/cards-objects.js");
 
 @@include("scripts/components/header/header.js");
 @@include("scripts/components/main/main.js");
@@ -33,10 +35,8 @@
 @@include("scripts/request/request-login.js");
 @@include("scripts/request/request-posts.js");
 @@include("scripts/request/request-get.js");
-@@include("scripts/class/cards/cards.js");
-@@include("scripts/class/cards/cards-objects.js");
-
-
+@@include("scripts/request/request-edit.js");
+@@include("scripts/request/request-delete.js");
 if (localStorage.getItem("token") !== "noid" && localStorage.getItem("token")) {
   buttonLoginElement.style.display = "none";
   buttonCreateElement.style.display = "block";

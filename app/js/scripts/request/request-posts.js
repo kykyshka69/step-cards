@@ -1,9 +1,7 @@
-buttonPostElement.onclick = (e) => {
-  e.preventDefault();
-  document.querySelector(".background-popup").classList.remove("popup__active");
-  modalFooterElement.textContent = "";
+buttonPostElement.onclick = () => {
   modalBodyElement.innerHTML = "";
-  chooseDoctorsElement.value = "Выбор доктора";
+  document.querySelector(".background-popup").classList.remove("popup__active");
+
   if (chooseDoctorsElement.value === "Dentist") {
     createPost({
       doctor: "Стоматолог",
@@ -36,6 +34,7 @@ buttonPostElement.onclick = (e) => {
     });
   }
 };
+
 function createPost(body) {
   fetch("https://ajax.test-danit.com/api/v2/cards", {
     method: "POST",
@@ -47,6 +46,8 @@ function createPost(body) {
   })
     .then((response) => {
       if (response.status === 200) {
+        alert("Карточка создана");
+        location.reload();
         return response.text();
       }
     })

@@ -1,16 +1,22 @@
 class Tools {
   constructor(elem) {
     this.elem = elem;
+
   }
   createElement() {
     let elem = document.createElement(`${this.elem}`);
     return elem;
   }
 
+  createFilter(){
+    let elem = document.createElement(`${this.elem}`);
+    elem.className = "mt-5 card mb-2";
+    return elem;
+  }
   renderPage() {
     const wrapper = this.createElement("div");
-    wrapper.className = "header navbar navbar-expand-lg navbar-light bg-light";
-    wrapper.append(this.renderHeader(), this.renderFooter());
+    wrapper.className = "header shadow navbar navbar-expand-lg navbar-light bg-light";
+    wrapper.append(this.renderHeader());
     return wrapper;
   }
   renderHeader() {
@@ -41,6 +47,7 @@ class Tools {
     return container;
   }
 
+
   renderFooter() {
     const footer = this.createElement();
     footer.className = "footer";
@@ -48,11 +55,10 @@ class Tools {
   }
 }
 
-
-{/* <div class="card-body">
+/* <div class="card-body">
 <h5 class="card-title">Card title</h5>
 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 <a href="#" class="card-link">Card link</a>
 <a href="#" class="card-link">Another link</a>
-</div>  */}
+</div> */

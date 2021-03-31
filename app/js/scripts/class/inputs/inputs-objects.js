@@ -42,7 +42,7 @@ const inputAgeClass = new Input({
   name: "age",
   className: "input-age form-control",
   type: "text",
-  placeholder: "Your age",
+  placeholder: "Ваш возраст",
   elem: "input",
 });
 
@@ -70,6 +70,15 @@ const inputLastVisitClass = new Input({
   elem: "input",
 });
 
+const inputSearchClass = new Input({
+  name: "search",
+  className: "input-search form-control",
+  type: "text",
+  placeholder: "Введите имя",
+  elem: "input",
+});
+
+const inputSearchElement = inputSearchClass.render();
 const inputLoginElement = inputLoginClass.render();
 const inputPasswordElement = inputPasswordClass.render();
 const inputTargetElement = inputTargetClass.render();

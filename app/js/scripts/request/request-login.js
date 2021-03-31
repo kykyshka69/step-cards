@@ -6,7 +6,7 @@ buttonSubmitElement.onclick = () => {
     },
     body: JSON.stringify({
       email: inputLoginElement.value,
-      password: inputPasswordElement.nvalue,
+      password: inputPasswordElement.value,
     }),
   })
     .then((response) => {
@@ -17,8 +17,8 @@ buttonSubmitElement.onclick = () => {
       } else if (response.status == 200) {
         buttonLoginElement.style.display = "none";
         buttonCreateElement.style.display = "block";
-        popup.classList.remove("popup__active");
-        popupClass.textContent = "";
+        document.querySelector(".background-popup").classList.remove("popup__active");
+        location.reload()
         return response.text();
       }
     })

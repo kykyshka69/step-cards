@@ -1,5 +1,12 @@
 @import "variables"; //пишем переменные
 
+.row {
+    -moz-column-width: 25em;
+    -webkit-column-width: 25em;
+    -moz-column-gap: 10px;
+    -webkit-column-gap:10px; 
+}
+
 @import "reset"; //сборс стилей
 @import "fonts"; //подключаем шрифты
 

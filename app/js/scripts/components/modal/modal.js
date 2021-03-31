@@ -4,6 +4,7 @@ const modalHeaderElement = document.querySelector(".modal-header");
 const modalFooterElement = document.querySelector(".modal-footer");
 buttonCloseElement.onclick = (e) => {
   modalFooterElement.innerHTML = "";
+  modalBodyElement.innerHTML = "";
   document.querySelector(".background-popup").classList.remove("popup__active");
   document.body.style.background = "";
   chooseDoctorsElement.value = "Выбор доктора";

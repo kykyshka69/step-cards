@@ -10,6 +10,18 @@ class Modal extends Tools {
     return this.div;
   }
 
+  renderClear(){
+    this.div = this.createElement();
+    this.div.className = this.className;
+    return this.div;
+  }
+
+  renderInputGroup(){
+    this.div = this.createElement();
+    this.div.className = this.className;
+    return this.div;
+  }
+
   renderContainerModal() {
     const container = this.createElement("div");
     container.className =

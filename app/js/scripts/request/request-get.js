@@ -13,7 +13,9 @@ function getCard() {
       const main = document.querySelector(".main-container");
       main.className = "row justify-content-md-center gap-auto";
       data.forEach((item, i) => {
+        console.log(item)
         const {
+          id = "",
           doctor = "",
           purpose = "",
           description = "",
@@ -87,9 +89,19 @@ function getCard() {
           formElement.append(modalHeaderElement, modalFooterElement)
           modalBodyElement.insertAdjacentHTML("afterbegin", `<h6 class="card-subtitle mb-2 text-muted">Что вы хотите сделать?</h6>`)
           modalBodyElement.classList.add("justify-content-md-center")
-          modalFooterElement.append(buttonDeleteElement, buttonEditCardElement)
+          modalFooterElement.append(buttonDeleteElement, buttonEditCardElement);
+          buttonDeleteElement.onclick = () => {
+            console.log(id);
+            fetch(`https://ajax.test-danit.com/api/v2/cards/${id}`, {
+              method: 'DELETE',
+              headers: {
+                'Authorization': `Bearer ${localStorage.getItem("token")}`
+              },
+            })
+          }
         }
       });
     });
 }
+
 getCard();

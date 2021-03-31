@@ -98,6 +98,15 @@ function getCard() {
                 'Authorization': `Bearer ${localStorage.getItem("token")}`
               },
             })
+            .then((response) => {
+              console.log(response.status)
+              if (response.status == 200){
+                alert('Карточка удалена');
+                location.reload()
+              }
+            })
+            document.querySelector(".background-popup").classList.remove("popup__active");
+            formElement.innerHTML = "";
           }
         }
       });

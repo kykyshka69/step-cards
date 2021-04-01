@@ -14,5 +14,5 @@ function alert(){
     document.querySelector(".toast:not(.showing):not(.show)").style.opacity = "1";
     setTimeout(() => {
       document.querySelector(".toast:not(.showing):not(.show)").style.opacity = "0";
-    }, 1000);  
+    }, 2000);  
 }

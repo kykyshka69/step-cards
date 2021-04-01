@@ -22,13 +22,12 @@ let container = document.body;
 @@include("textarea/main.js");
 @@include("filter/main.js");
 
-
 let selectChooseDoctor;
 createButton.addEventListener("click", () => {
   createButton.style.display = "none";
   popup.classList.add("popup__active");
   popupClass.classList.add("modal-dialog-scrollable", "modal-scrollbar");
-  popupClass.append(formAuthorization.render())
+  popupClass.append(formAuthorization.render());
   let formClass = document.querySelector(".popup-form");
   formClass.append(ModalContent.render());
   const createContentClass = document.querySelector(".popup-create-content");
@@ -41,8 +40,8 @@ createButton.addEventListener("click", () => {
   createHeaderClass.append(btnClose.render());
   let closeModal = document.querySelector(".close-modal");
 
-  closeModal.addEventListener('click', () => {
-    popup.classList.remove('popup__active');
+  closeModal.addEventListener("click", () => {
+    popup.classList.remove("popup__active");
     popupClass.textContent = "";
     createButton.style.display = "block";
   });
@@ -52,7 +51,7 @@ createButton.addEventListener("click", () => {
   createContentClass.append(modalFooter.render());
   const createFooterClass = document.querySelector(".popup-footer");
   createFooterClass.append(btnSubmit.render());
-   selectChooseDoctor = document.querySelector(".choose-doctors");
+  selectChooseDoctor = document.querySelector(".choose-doctors");
   selectChooseDoctor.append(
     optionDefault.render(),
     optionCardiologist.render(),

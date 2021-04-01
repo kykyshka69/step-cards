@@ -1,3 +1,4 @@
+const main = document.querySelector(".main-container");
 function getCard() {
   fetch("https://ajax.test-danit.com/api/v2/cards", {
     method: "GET",
@@ -10,7 +11,6 @@ function getCard() {
       return response.json();
     })
     .then((data) => {
-      const main = document.querySelector(".main-container");
       main.className = "row justify-content-md-center gap-auto";
       data.forEach((item, i) => {
         console.log(item);
@@ -130,9 +130,9 @@ function getCard() {
           }).then((response) => {
             console.log(response.status);
             if (response.status == 200) {
-              alert("Карточка удалена");
-              location.reload();
-              cardElement.classList.add("hide");
+              main.textContent = "";
+              getCard();
+              alert();
             }
           });
           document
@@ -152,7 +152,6 @@ function getCard() {
             .then((response) => {
               if (response.status === 200) {
                 alert("Карточка изменена");
-
                 location.reload();
                 return response.text();
               }

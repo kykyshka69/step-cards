@@ -12,6 +12,8 @@
 @@include("scripts/class/visit/visitCardiologist/visitCardiologist.js");
 @@include("scripts/class/visit/visitDentist/visitDentist.js");
 @@include("scripts/class/visit/visitTherapist/visitTherapist.js");
+@@include("scripts/class/alert/alert.js");
+
 
 @@include("scripts/class/buttons/buttons-objects.js");
 @@include("scripts/class/forms/forms-objects.js");
@@ -27,6 +29,8 @@
 @@include("scripts/class/visit/visitTherapist/visitTherapist-objects.js");
 @@include("scripts/class/tools/tools-objects.js");
 @@include("scripts/class/cards/cards-objects.js");
+@@include("scripts/class/alert/alert-objects.js");
+
 
 @@include("scripts/components/header/header.js");
 @@include("scripts/components/main/main.js");

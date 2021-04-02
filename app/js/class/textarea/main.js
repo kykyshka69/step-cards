@@ -21,6 +21,6 @@ class textArea extends Tools {
     name: "textarea",
     className: "modal-textarea form-control",
     textarea: "150",
-    placeholder: "Введите текст, максимальное кол-во букв 150",
+    placeholder: "Перенесенные заболевания сердечно-сосудистой системы",
     elem: "textarea",
   });

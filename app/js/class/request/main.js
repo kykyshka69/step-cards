@@ -1,22 +1,18 @@
-
 const submitBtn = document.querySelector(".btn-submit");
-submitBtn.onclick = () => {
-  const loginValue = document.querySelector(".input-login");
-  const passwordValue = document.querySelector(".input-password");
+submitBtn.addEventListener("click", () => {
+  console.log("123");
   fetch("https://ajax.test-danit.com/api/v2/cards/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      email: loginValue.value,
-      password: passwordValue.value,
+      email: document.querySelector(".input-login").value,
+      password: document.querySelector(".input-password").value,
     }),
   })
     .then((response) => {
-      if (response.status == 401 ) {
-        // loginValue.style.borderColor = "red";
-        // passwordValue.style.borderColor = "red";
+      if (response.status == 401) {
         alert("Incorrect Login or Password");
         return "noid";
       } else if (response.status == 200) {
@@ -28,10 +24,8 @@ submitBtn.onclick = () => {
       }
     })
     .then((data) => {
-      if (data !== undefined){
+      if (data !== undefined) {
         localStorage.setItem("token", data);
       }
     });
-  console.log(loginValue.value);
-  console.log(passwordValue.value);
-};
+});

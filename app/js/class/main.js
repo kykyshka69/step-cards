@@ -16,21 +16,27 @@ let container = document.body;
 @@include("form/main.js");
 @@include("input/main.js");
 @@include("label/main.js");
+@@include("form/loginForm.js");
 @@include("request/main.js");
 @@include("select/main.js");
 @@include("options/main.js");
 @@include("textarea/main.js");
 @@include("filter/main.js");
-
+@@include("Visit/general.js");
+@@include("Visit/visitCardiologist.js");
+@@include("Visit/visitTherapist.js");
+@@include("Visit/visitDentist.js");
+@@include("form/chooseForm.js");
+@@include("form/createVisit.js");
+@@include("request/getCard.js");
+@@include("request/posts.js");
 
 let selectChooseDoctor;
 createButton.addEventListener("click", () => {
   createButton.style.display = "none";
   popup.classList.add("popup__active");
   popupClass.classList.add("modal-dialog-scrollable", "modal-scrollbar");
-  popupClass.append(formAuthorization.render())
-  let formClass = document.querySelector(".popup-form");
-  formClass.append(ModalContent.render());
+  popupClass.append(ModalContent.render());
   const createContentClass = document.querySelector(".popup-create-content");
   createContentClass.append(modalHeader.render());
   const createHeaderClass = document.querySelector(".popup-header");
@@ -40,9 +46,10 @@ createButton.addEventListener("click", () => {
   );
   createHeaderClass.append(btnClose.render());
   let closeModal = document.querySelector(".close-modal");
+  console.log(closeModal);
+  closeModal.addEventListener("click", () => {
+    popup.classList.remove("popup__active");
 
-  closeModal.addEventListener('click', () => {
-    popup.classList.remove('popup__active');
     popupClass.textContent = "";
     createButton.style.display = "block";
   });
@@ -51,8 +58,11 @@ createButton.addEventListener("click", () => {
   createBodyClass.append(chooseDoctors.render());
   createContentClass.append(modalFooter.render());
   const createFooterClass = document.querySelector(".popup-footer");
-  createFooterClass.append(btnSubmit.render());
-   selectChooseDoctor = document.querySelector(".choose-doctors");
+  createFooterClass.append(createPostBtn);
+
+  document.querySelector(".btn-post").style.display = "none";
+
+  selectChooseDoctor = document.querySelector(".choose-doctors");
   selectChooseDoctor.append(
     optionDefault.render(),
     optionCardiologist.render(),
@@ -68,39 +78,3 @@ if (localStorage.getItem("token") !== "noid" && localStorage.getItem("token")) {
 } else {
   loginButton.style.display = "block";
 }
-
-document.addEventListener("click", function (event) {
-  if (
-    document.querySelector(".choose-doctors").value !== "Выбор доктора" &&
-    document.querySelector(".choose-doctors") === event.target
-  ) {
-    const modalBodyClass = document.querySelector(".popup-body");
-    formLogin.textContent = "";
-    modalBodyClass.append(formLogin);
-    formLogin.append(
-      visitTarget.render(),
-      visitDescription.render(),
-      chooseUrgency.render(),
-      labelFullName.render(),
-      labelTextArea.render()
-    );
-    const selectUrgency = document.querySelector(".choose-urgency");
-    selectUrgency.append(
-      optionDefaultUrgency.render(),
-      optionRegular.render(),
-      optionPriority.render(),
-      optionUrgent.render()
-    );
-
-    const labelTargetClass = document.querySelector(".visit-target");
-    labelTargetClass.append(inputTarget.render());
-    const labelDescriptionClass = document.querySelector(".description");
-    labelDescriptionClass.append(inputDescription.render());
-    const labelNameClass = document.querySelector(".full-name");
-    labelNameClass.append(inputFullName.render());
-    const labelTextAreaClass = document.querySelector(".label-textarea");
-    labelTextAreaClass.append(modalTextArea.render());
-  } else if (document.querySelector(".choose-doctors").value == "Терапевт") {
-    console.log();
-  }
-});

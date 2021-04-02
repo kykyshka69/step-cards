@@ -23,19 +23,6 @@ const labelPassword = new Label({
   name: "login-authorization",
   className: "password-authorization input-group mb-3",
 });
-const labelAge = new Label({
-  elem: "label",
-  name: "label-age",
-  className: "label-age input-group mb-3",
-});
-
-formLogin.append(modalContainer.render());
-const bodyInput = document.querySelector(".modal-body");
-bodyInput.append(labelLogin.render(), labelPassword.render());
-const labelLog = document.querySelector(".login-authorization");
-labelLog.prepend(inputLogin.render());
-const labelPass = document.querySelector(".password-authorization");
-labelPass.prepend(inputPassword.render());
 
 const visitTarget = new Label({
   elem: "label",
@@ -59,4 +46,28 @@ const labelTextArea = new Label({
   elem: "label",
   name: "label-textarea",
   className: "label-textarea input-group mb-3",
+});
+
+const pressure = new Label({
+  elem: "label",
+  name: "label-pressure",
+  className: "label-pressure input-group mb-3",
+});
+
+const labelWeight = new Label({
+  elem: "label",
+  name: "label-weight",
+  className: "label-weight input-group mb-3",
+});
+
+const age = new Label({
+  name: "label-age",
+  elem: "label",
+  className: "label-age input-group mb-3",
+});
+
+const date = new Label({
+  name: "label-date",
+  elem: "label",
+  className: "label-date input-group mb-3",
 });

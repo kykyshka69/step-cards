@@ -1,25 +1,25 @@
 class Buttons extends Tools {
-    constructor({ elem, className, type, textContent }) {
-      super(elem);
-      this.className = className;
-      this.type = type;
-      this.textContent = textContent;
-    }
-    render() {
-      this.btn = this.createElement();
-      this.btn.className = this.className;
-      this.btn.type = this.type;
-      this.btn.textContent = this.textContent;
-      return this.btn;
-    }
+  constructor({ elem, className, type, textContent }) {
+    super(elem);
+    this.className = className;
+    this.type = type;
+    this.textContent = textContent;
+  }
+  render() {
+    this.btn = this.createElement();
+    this.btn.className = this.className;
+    this.btn.type = this.type;
+    this.btn.textContent = this.textContent;
+    return this.btn;
+  }
 }
 
 const btnLogin = new Buttons({
-    elem: "a",
-    className: "header-button btn btn-primary",
-    type: "button",
-    textContent: "LOGIN",
-  });
+  elem: "a",
+  className: "header-button btn btn-primary",
+  type: "button",
+  textContent: "LOGIN",
+});
 
 const btnSubmit = new Buttons({
   elem: "button",
@@ -31,7 +31,7 @@ const btnSubmit = new Buttons({
 const btnClose = new Buttons({
   elem: "button",
   className: "btn-close close-modal",
-  type: "button"
+  type: "button",
 });
 
 const btnCreate = new Buttons({
@@ -40,13 +40,19 @@ const btnCreate = new Buttons({
   type: "button",
   textContent: "CreateVisit",
 });
+const btnPost = new Buttons({
+  elem: "button",
+  className: "btn btn-post btn-primary",
+  type: "submit",
+  textContent: "Создать визит",
+});
+
 header.append(btnLogin.render());
 let loginButton = document.querySelector(".header-button");
-loginButton.addEventListener('click', () => {
-    popup.classList.add('popup__active');
-    loginButton.style.display = 'none';
+loginButton.addEventListener("click", () => {
+  popup.classList.add("popup__active");
+  loginButton.style.display = "none";
 });
 header.append(btnCreate.render());
 let createButton = document.querySelector(".btn-create");
 createButton.style.display = "none";
-

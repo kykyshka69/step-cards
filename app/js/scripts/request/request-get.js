@@ -36,10 +36,6 @@ function getCard() {
           age,
           lastVisit,
         ];
-        if (arr !== '') {
-          console.log(arr);
-
-        }
         const cardElement = cardClass.render();
         const cardBodyElement = cardClass.renderCardBody();
         const cardTitleElement = cardClass.renderCardTitle();

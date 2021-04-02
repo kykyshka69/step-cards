@@ -1,8 +1,0 @@
-@import "variables"; //пишем переменные
-
-@import "reset"; //сборс стилей
-@import "fonts"; //подключаем шрифты
-
-//подключаем основные стили сайта(блоки)
-@import "blocks/popup";
-@import "blocks/scrollbar"

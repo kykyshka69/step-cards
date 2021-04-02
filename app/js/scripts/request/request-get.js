@@ -13,7 +13,6 @@ function getCard() {
     .then((data) => {
       main.className = "row justify-content-md-center gap-auto";
       data.forEach((item, i) => {
-        console.log(item);
         const {
           id = "",
           doctor = "",
@@ -37,7 +36,10 @@ function getCard() {
           age,
           lastVisit,
         ];
+        if (arr !== '') {
+          console.log(arr);
 
+        }
         const cardElement = cardClass.render();
         const cardBodyElement = cardClass.renderCardBody();
         const cardTitleElement = cardClass.renderCardTitle();

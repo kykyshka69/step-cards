@@ -1,5 +1,12 @@
-body{
-    font-family: 'Roboto', sans-serif;
-    color: #333; 
-    background-color: $body-bg;
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: $body-bg;
+
+  .content-info-patient {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
 }

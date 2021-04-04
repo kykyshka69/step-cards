@@ -19,9 +19,11 @@ inputFilterElement.oninput = function () {
 
           let arrayFiterName = [fullName.toLowerCase().indexOf(inputValue)];
           if (arrayFiterName > -1) {
+            main.textContent = "";
             test[i].classList.remove("hide");
           } else {
             test[i].classList.add("hide");
+            main.textContent = `По вашему запросу ничего не найдено`;
           }
         });
       });
@@ -32,7 +34,7 @@ inputFilterElement.oninput = function () {
 
 for (let index = 0; index < chooseUrgencyFilterElement.length; index++) {
   const element = chooseUrgencyFilterElement[index];
-  console.log((element.disabled = false));
+  element.disabled = false;
 }
 chooseUrgencyFilterElement.onchange = function () {
   let urgencyValue = this.value;
@@ -51,7 +53,6 @@ chooseUrgencyFilterElement.onchange = function () {
         data.forEach((users, i) => {
           let test = document.querySelectorAll(".card");
           const { urgency } = users;
-          console.log(urgencyValue);
           let arrayFiterUrgency = [urgency.search(urgencyValue)];
           if (arrayFiterUrgency > -1) {
             test[i].classList.remove("hide");

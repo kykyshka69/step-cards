@@ -70,14 +70,6 @@ const inputLastVisitClass = new Input({
   elem: "input",
 });
 
-// const inputFilterSearchClass = new Input({
-//   name: "search",
-//   className: "input-search form-control",
-//   type: "text",
-//   placeholder: "Поиск",
-//   elem: "input",
-// });
-
 const inputLoginElement = inputLoginClass.render();
 const inputPasswordElement = inputPasswordClass.render();
 const inputTargetElement = inputTargetClass.render();
@@ -87,6 +79,5 @@ const inputAgeElement = inputAgeClass.render();
 const inputPressureElement = inputPressureClass.render();
 const inputWeightElement = inputWeightClass.render();
 const inputLastVisitElement = inputLastVisitClass.render();
-// const inputFilterSearchElement = inputFilterSearchClass.render();
 labelLoginElement.append(inputLoginElement);
 labelPasswordElement.append(inputPasswordElement);

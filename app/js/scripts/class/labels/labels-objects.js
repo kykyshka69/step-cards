@@ -58,12 +58,6 @@ const labelLastVisitClass = new Label({
   className: "label-date input-group mb-3",
 });
 
-// const labelFilterSearchClass = new Label({
-//   elem: "label",
-//   name: "label-filter",
-//   className: "label-filter input-gorup mb-3",
-// });
-
 const labelLoginElement = labelLoginClass.render();
 const labelPasswordElement = labelPasswordClass.render();
 const labelAgeElement = labelAgeClass.render();
@@ -74,6 +68,5 @@ const labelTextAreaElement = labelTextAreaClass.render();
 const labelPressureElement = labelPressureClass.render();
 const labelWeightElement = labelWeightClass.render();
 const labelLastVisitElement = labelLastVisitClass.render();
-// const labelFilterSearchElement = labelFilterSearchClass.render();
 document.querySelector(".modal-body").append(labelLoginElement);
 document.querySelector(".modal-body").append(labelPasswordElement);

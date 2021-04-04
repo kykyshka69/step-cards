@@ -30,6 +30,4 @@ buttonSubmitElement.onclick = () => {
         localStorage.setItem("token", data);
       }
     });
-  console.log(inputLoginElement.value);
-  console.log(inputPasswordElement.value);
 };

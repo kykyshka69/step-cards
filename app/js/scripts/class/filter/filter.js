@@ -8,7 +8,7 @@ class Filter extends Tools {
     (inputFilter.name = "search"),
       (inputFilter.className = "input-search form-control");
     inputFilter.type = "text";
-    inputFilter.placeholder = "Поиск";
+    inputFilter.placeholder = "Введите ФИО";
     return inputFilter;
   }
   renderLabelFilter() {
@@ -21,11 +21,10 @@ class Filter extends Tools {
   render() {
     const filter = this.createElement();
     const titleFilter = document.createElement("span");
-    titleFilter.textContent = "Filter";
+    titleFilter.textContent = "Поиск";
     titleFilter.className = "input-group-text";
     filter.className = this.className;
     document.querySelector(".main-filter__container").append(filter);
-
 
     filter.append(
       titleFilter,

@@ -25,6 +25,8 @@ class Filter extends Tools {
     titleFilter.className = "input-group-text";
     filter.className = this.className;
     document.querySelector(".main-filter__container").append(filter);
+
+
     filter.append(
       titleFilter,
       this.renderLabelFilter(),

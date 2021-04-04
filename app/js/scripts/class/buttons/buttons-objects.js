@@ -65,12 +65,6 @@ const buttonEditCardClass = new Buttons({
   type: "button",
   textContent: "Save",
 });
-const buttonFilterSearchClass = new Buttons({
-  elem: "button",
-  className: "btn btn-primary mb-2",
-  type: "button",
-  textContent: "Search",
-});
 
 const buttonLoginElement = buttonLoginClass.render();
 const buttonSubmitElement = buttonSubmitClass.render();
@@ -82,4 +76,3 @@ const buttonEditElement = buttonEditClass.render();
 const buttonHideInfoElement = buttonHideInfoClass.render();
 const buttonDeleteElement = buttonDeleteClass.render();
 const buttonEditCardElement = buttonEditCardClass.render();
-const buttonFilterSearchElement = buttonFilterSearchClass.render();

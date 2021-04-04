@@ -28,8 +28,7 @@ class Filter extends Tools {
     filter.append(
       titleFilter,
       this.renderLabelFilter(),
-      chooseUrgencyFilterElement,
-      buttonFilterSearchElement
+      chooseUrgencyFilterElement
     );
 
     return filter;

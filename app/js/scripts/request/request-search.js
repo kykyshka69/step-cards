@@ -1,8 +1,12 @@
+/*
+Нужно дописать фильтр , и есть баги на PUT  запросах
+*/
+
 const searchFilterUrgency = document.querySelector(".select-filter__urgency");
 const inputFilterElement = document.querySelector(".input-search");
-
 inputFilterElement.oninput = function () {
-  let inputValue = this.value.trim();
+  let inputValue = this.value.trim().toLowerCase();
+  console.log(inputValue);
   if (inputValue != "") {
     fetch("https://ajax.test-danit.com/api/v2/cards", {
       method: "GET",
@@ -15,9 +19,12 @@ inputFilterElement.oninput = function () {
         return response.json();
       })
       .then((data) => {
-        data.forEach((user, i) => {
-          const { fullName } = user;
+        data.forEach((users) => {
+          let test = document.querySelectorAll(".main-cards .card");
+          const { fullName, urgency } = users;
+          fullName.toLowerCase();
         });
       });
+  } else {
   }
 };

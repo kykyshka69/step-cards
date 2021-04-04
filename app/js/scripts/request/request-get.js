@@ -162,7 +162,6 @@ function getCard() {
             })
               .then((response) => {
                 if (response.status === 200) {
-                  main.textContent = "";
                   getCard();
                   return response.text();
                 }
@@ -174,6 +173,7 @@ function getCard() {
             document
               .querySelector(".background-popup")
               .classList.remove("popup__active");
+            console.log(chooseDoctorsElement.value);
             if (chooseDoctorsElement.value === "Dentist") {
               putPost({
                 doctor: "Стоматолог",

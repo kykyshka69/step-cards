@@ -1,7 +1,3 @@
-/*
-Нужно дописать фильтр , и есть баги на PUT  запросах
-*/
-
 const inputFilterElement = document.querySelector(".input-search");
 inputFilterElement.oninput = function () {
   let inputValue = this.value.trim().toLowerCase();
@@ -33,9 +29,14 @@ inputFilterElement.oninput = function () {
     getCard();
   }
 };
+
+for (let index = 0; index < chooseUrgencyFilterElement.length; index++) {
+  const element = chooseUrgencyFilterElement[index];
+  console.log((element.disabled = false));
+}
 chooseUrgencyFilterElement.onchange = function () {
   let urgencyValue = this.value;
-  if (urgencyValue != "") {
+  if (urgencyValue != "Срочность") {
     fetch("https://ajax.test-danit.com/api/v2/cards", {
       method: "GET",
       headers: {
@@ -50,9 +51,7 @@ chooseUrgencyFilterElement.onchange = function () {
         data.forEach((users, i) => {
           let test = document.querySelectorAll(".card");
           const { urgency } = users;
-          // let test2 = chooseUrgencyFilterClass.renderOptionChooseUrgency();
-          // test2.disabled = false;
-
+          console.log(urgencyValue);
           let arrayFiterUrgency = [urgency.search(urgencyValue)];
           if (arrayFiterUrgency > -1) {
             test[i].classList.remove("hide");

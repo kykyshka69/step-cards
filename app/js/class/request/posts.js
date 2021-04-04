@@ -1,6 +1,8 @@
 createPostBtn = btnPost.render();
 
-createPostBtn.addEventListener("click", (e) => {
+createPostBtn.onclick = (event) => {
+
+  console.log("123");
   popup.classList.remove("popup__active");
   if (document.querySelector(".choose-doctors").value === "Стоматолог") {
     createPost({
@@ -33,7 +35,7 @@ createPostBtn.addEventListener("click", (e) => {
       fullname: document.querySelector(".input-fullName").value,
     });
   }
-});
+};
 function createPost(body) {
   fetch("https://ajax.test-danit.com/api/v2/cards", {
     method: "POST",
@@ -45,7 +47,6 @@ function createPost(body) {
   })
     .then((response) => {
       if (response.status === 200) {
-        getCard();
         return response.text();
       }
     })

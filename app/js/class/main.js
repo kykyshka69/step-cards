@@ -28,9 +28,8 @@ let container = document.body;
 @@include("Visit/visitDentist.js");
 @@include("form/chooseForm.js");
 @@include("form/createVisit.js");
-@@include("request/getCard.js");
 @@include("request/posts.js");
-
+@@include("request/getCard.js");
 let selectChooseDoctor;
 createButton.addEventListener("click", () => {
   createButton.style.display = "none";

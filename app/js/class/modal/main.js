@@ -9,8 +9,18 @@ class Modal extends Tools {
     this.div.insertAdjacentHTML("afterbegin", "<div class=popup></div>");
     return this.div;
   }
+
+  cards() {
+    this.div = this.createElement();
+    this.div.className = this.className;
+    return this.div;
+  }
 }
 
+const modalCards = new Modal({
+  elem: "div",
+  className: "card",
+});
 const modalWindow = new Modal({
   elem: "div",
   className: "background-popup modal",

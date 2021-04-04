@@ -1,6 +1,5 @@
 const submitBtn = document.querySelector(".btn-submit");
 submitBtn.addEventListener("click", () => {
-  console.log("123");
   fetch("https://ajax.test-danit.com/api/v2/cards/login", {
     method: "POST",
     headers: {

@@ -44,7 +44,7 @@ class Tools {
 
   renderMainFilterContainer() {
     const Filtercontainer = this.createElement();
-    Filtercontainer.className = "main-filter__container";
+    Filtercontainer.className = "modal-content main-filter__container container mt-5";
     return Filtercontainer;
   }
   renderFooter() {

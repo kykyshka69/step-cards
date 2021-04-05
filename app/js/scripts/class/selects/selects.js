@@ -1,11 +1,12 @@
 class Select extends Tools {
-  constructor({ elem, className }) {
+  constructor({ elem, className, disabled }) {
     super(elem);
     this.className = className;
+    this.disabled = disabled;
   }
   renderSelectChooseDoctors() {
     const chooseDoctors = this.createElement();
-    chooseDoctors.className = "choose-doctors form-select mb-3";
+    chooseDoctors.className = "col-md-3 choose-doctors form-select mb-3";
     chooseDoctors.append(
       this.renderOptionChooseDoctors(),
       this.renderOptionCardiologist(),
@@ -17,9 +18,9 @@ class Select extends Tools {
 
   renderOptionChooseDoctors() {
     const optionChooseDoctors = document.createElement("option");
-    optionChooseDoctors.textContent = "Выбор доктора";
-    (optionChooseDoctors.selected = true),
-      (optionChooseDoctors.disabled = true);
+      optionChooseDoctors.textContent = "Выбор доктора";
+      (optionChooseDoctors.selected = true),
+      (optionChooseDoctors.disabled = this.disabled);
     return optionChooseDoctors;
   }
   renderOptionCardiologist() {
@@ -55,7 +56,11 @@ class Select extends Tools {
 
   renderOptionChooseUrgency() {
     const optionChooseUrgency = document.createElement("option");
-    optionChooseUrgency.textContent = "Срочность";
+    if (this.disabled) {
+      optionChooseUrgency.textContent = "Все";
+    } else {
+      optionChooseUrgency.textContent = "Срочность";
+    }
     (optionChooseUrgency.selected = true),
       (optionChooseUrgency.disabled = true);
     return optionChooseUrgency;

@@ -1,7 +1,3 @@
-/*
-Нужно дописать фильтр , и есть баги на PUT  запросах
-*/
-
 const inputFilterElement = document.querySelector(".input-search");
 inputFilterElement.oninput = function () {
   let inputValue = this.value.trim().toLowerCase();
@@ -52,7 +48,6 @@ chooseUrgencyFilterElement.onchange = function () {
           const { urgency } = users;
           // let test2 = chooseUrgencyFilterClass.renderOptionChooseUrgency();
           // test2.disabled = false;
-
           let arrayFiterUrgency = [urgency.search(urgencyValue)];
           if (arrayFiterUrgency > -1) {
             test[i].classList.remove("hide");

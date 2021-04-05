@@ -19,9 +19,11 @@ inputFilterElement.oninput = function () {
 
           let arrayFiterName = [fullName.toLowerCase().indexOf(inputValue)];
           if (arrayFiterName > -1) {
+            main.textContent = "";
             test[i].classList.remove("hide");
           } else {
             test[i].classList.add("hide");
+            main.textContent = `По вашему запросу ничего не найдено`;
           }
         });
       });
@@ -29,9 +31,14 @@ inputFilterElement.oninput = function () {
     getCard();
   }
 };
+
+for (let index = 0; index < chooseUrgencyFilterElement.length; index++) {
+  const element = chooseUrgencyFilterElement[index];
+  element.disabled = false;
+}
 chooseUrgencyFilterElement.onchange = function () {
   let urgencyValue = this.value;
-  if (urgencyValue != "") {
+  if (urgencyValue != "Срочность") {
     fetch("https://ajax.test-danit.com/api/v2/cards", {
       method: "GET",
       headers: {
@@ -46,8 +53,6 @@ chooseUrgencyFilterElement.onchange = function () {
         data.forEach((users, i) => {
           let test = document.querySelectorAll(".card");
           const { urgency } = users;
-          // let test2 = chooseUrgencyFilterClass.renderOptionChooseUrgency();
-          // test2.disabled = false;
           let arrayFiterUrgency = [urgency.search(urgencyValue)];
           if (arrayFiterUrgency > -1) {
             test[i].classList.remove("hide");

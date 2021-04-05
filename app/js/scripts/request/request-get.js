@@ -1,4 +1,7 @@
 const main = document.querySelector(".main-container");
+const FilterContainerElement = document.querySelector(
+  ".main-filter__container"
+);
 function getCard() {
   main.textContent = "";
   fetch("https://ajax.test-danit.com/api/v2/cards", {
@@ -14,6 +17,7 @@ function getCard() {
     .then((data) => {
       main.className = "main-cards row justify-content-md-center gap-auto";
       if (data.length === 0) {
+        FilterContainerElement.classList.add("hide");
         main.insertAdjacentHTML(
           "afterbegin",
           `<figure class="text-center position-absolute top-50 start-50 translate-middle">
@@ -21,6 +25,7 @@ function getCard() {
           </figure>	`
         );
       } else {
+        FilterContainerElement.classList.remove("hide");
         data.forEach((item, i) => {
           const {
             id = "",
@@ -162,7 +167,6 @@ function getCard() {
             })
               .then((response) => {
                 if (response.status === 200) {
-                  main.textContent = "";
                   getCard();
                   return response.text();
                 }

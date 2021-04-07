@@ -1,0 +1,1 @@
+const visitDentistClass = new VisitDentist();

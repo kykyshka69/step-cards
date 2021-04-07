@@ -1,22 +1,6 @@
-.header{
-    display: flex;
-    padding: 20px;
-    justify-content: space-between;
-    box-shadow: 0 0 10px black;
-    .header-logo{
-        a{
-            padding: $dfmarg;
-            font-size: $dffont;
-            text-decoration: none;
-            color: #000000;
-        }
-    }
-    .header-button{
-        padding: 10px 20px;
-        font-size: $dffont;
-        text-decoration: none;
-        border-radius: 50px;
-        background: grey;
-        color: white;
-    }
+.hide {
+  display: none;
+}
+.active {
+  display: block;
 }

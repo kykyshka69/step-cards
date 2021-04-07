@@ -1,0 +1,1 @@
+const visitClass = new Visit();

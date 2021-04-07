@@ -1,0 +1,1 @@
+const visitCardiologistClass = new VisitCardiologist();

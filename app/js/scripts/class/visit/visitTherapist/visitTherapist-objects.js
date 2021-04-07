@@ -1,0 +1,1 @@
+const visitTherapistClass = new VisitTherapist();

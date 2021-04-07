@@ -38,6 +38,7 @@
 @@include("scripts/class/filter/filter.js");
 @@include("scripts/class/filter/filter-objects.js");
 @@include("scripts/request/request-search.js");
+
 if (localStorage.getItem("token") !== "noid" && localStorage.getItem("token")) {
   buttonLoginElement.style.display = "none";
   buttonCreateElement.style.display = "block";

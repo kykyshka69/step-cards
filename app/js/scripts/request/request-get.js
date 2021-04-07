@@ -15,7 +15,8 @@ function getCard() {
       return response.json();
     })
     .then((data) => {
-      main.className = "main-cards row justify-content-md-center gap-auto";
+      main.className = "main-cards";
+      // main.setAttribute("data-masonry", `{ "itemSelector": ".grid-item", "columnWidth": 200 }`);
       if (data.length === 0) {
         FilterContainerElement.classList.add("hide");
         main.insertAdjacentHTML(

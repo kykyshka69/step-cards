@@ -1,12 +1,55 @@
 @import "variables"; //пишем переменные
-
-.row {
-    -moz-column-width: 25em;
-    -webkit-column-width: 25em;
-    -moz-column-gap: 10px;
-    -webkit-column-gap:10px; 
+   
+  
+@media (min-width: 400px) {
+    .main-cards {
+    columns: 1; 
+    }
 }
-
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+    .main-cards {
+    columns: 1;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .main-cards {
+    columns: 1; 
+    }
+}
+@media only screen and (min-width: 600px) {
+    .main-cards {
+    columns: 2;
+    }
+}
+@media (min-width: 768px) {
+    .main-cards {
+    columns: 2;
+    }
+}
+@media (min-width: 992px) {
+    .main-cards {
+    columns: 3;
+    }
+}
+@media (min-width: 1200px) {
+    .main-cards {
+    columns: 4; 
+    }
+}   
+    .main-cards{
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .card {
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 15px;
+    background: #fff;
+    padding-bottom: 5px;
+    border-radius: 0 0 4px 4px;
+    box-sizing: border-box;
+}
 @import "reset"; //сборс стилей
 @import "fonts"; //подключаем шрифты
 

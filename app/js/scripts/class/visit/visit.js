@@ -1,25 +1,23 @@
 class Visited {
   constructor() {}
   render() {
-    form.append(
-      visitTarget.render(),
-      visitDescription.render(),
-      labelFullName.render(),
-      chooseUrgency.render()
+    formElement.append(
+      labelTargetElement,
+      labelDescriptionElement,
+      labelFullNameElement,
+      labelDescriptionElement,
+      chooseUrgencyElement
     );
-    document.querySelector(".visit-target").append(inputTarget.render());
-    document.querySelector(".description").append(inputDescription.render());
-    document
-      .querySelector(".choose-urgency")
-      .append(
-        optionDefaultUrgency.render(),
-        optionRegular.render(),
-        optionPriority.render(),
-        optionUrgent.render()
-      );
-    document.querySelector(".full-name").append(inputFullName.render());
+    labelTargetElement.append(inputTargetElement);
+    labelDescriptionElement.append(inputDescriptionElement);
+    chooseUrgencyElement.append(
+      optionChooseUrgencyElement,
+      optionRegularElement,
+      optionPriorityElement,
+      optionUrgentElement
+    );
+    labelFullNameElement.append(inputFullNameElement);
 
-    return form;
+    return formElement;
   }
 }
-const generalVisit = new Visited();

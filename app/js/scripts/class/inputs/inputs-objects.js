@@ -5,8 +5,8 @@ const inputLoginClass = new Input({
     placeholder: "Your email",
     elem: "input",
 });
-  
-  
+
+
 const inputTargetClass = new Input ({
     name: "visit-target",
     className: "visit__target form-control",
@@ -14,7 +14,7 @@ const inputTargetClass = new Input ({
     placeholder: "Цель визита",
     elem: 'input',
 });
-  
+
 const inputDescriptionClass = new Input ({
     name: 'Description',
     className: 'input_description form-control',
@@ -22,7 +22,7 @@ const inputDescriptionClass = new Input ({
     placeholder: 'Краткое описание визита',
     elem: 'input'
 });
-  
+
 const inputFullNameClass = new Input ({
     name: 'fullName',
     className: 'input-fullName form-control',
@@ -30,15 +30,15 @@ const inputFullNameClass = new Input ({
     placeholder: 'ФИО',
     elem: 'input'
 });
-  
+
 const inputAgeClass = new Input({
-    name: "fullName",
+    name: "age",
     className: "input-age form-control",
     type: "text",
     placeholder: "Your age",
     elem: "input",
 });
-  
+
 const inputLoginElement = inputLoginClass.render();
 const inputTargetElement = inputTargetClass.render();
 const inputDescriptionElement = inputDescriptionClass.render();

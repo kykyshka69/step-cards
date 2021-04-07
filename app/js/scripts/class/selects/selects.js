@@ -1,6 +1,6 @@
 class Select extends Tools {
   constructor({ elem, className }) {
-    super(elem,className);
+    super(elem);
     this.className = className;
   }
   render() {

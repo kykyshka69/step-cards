@@ -25,7 +25,6 @@
     "node-sass": "^5.0.0"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.3",
     "gulp-webp": "^4.0.1",
     "gulp-webp-html": "^1.0.2"
   }

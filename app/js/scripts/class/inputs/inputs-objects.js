@@ -69,4 +69,4 @@ const inputFullNameElement = inputFullNameClass.render();
 const inputAgeElement = inputAgeClass.render();
 const inputPressureElement = inputPressureClass.render();
 const inputWeightElement = inputWeightClass.render();
-const inputLastVisit = inputLastVisitClass.render();
+const inputLastVisitElement = inputLastVisitClass.render();

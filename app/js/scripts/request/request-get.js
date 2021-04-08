@@ -39,17 +39,16 @@ function getCard() {
         cardElement.style.width = "18rem";
         const cardBodyElement = cardClass.renderCardBody();
         const cardBodyElement__Content = cardClass.renderCardBody();
-        cardBodyElement__Content.className = "test";
+        cardBodyElement__Content.className = "card-components";
         const cardBodyElement__Button = cardClass.renderCardBody();
-        cardBodyElement__Button.className = "d-grid gap-2";
+        cardBodyElement__Button.className = "d-flex justify-content-between";
         const cardTitleElement = cardClass.renderCardTitle();
         const cardSubtitleElement = cardClass.renderCardSubtitle();
         const buttonEditElement = buttonEditClass.render();
         const buttonShowMoreElement = buttonShowMoreClass.render();
         const buttonHideInfoElement = buttonHideInfoClass.render();
         main.append(cardElement);
-        cardElement.append(cardBodyElement);
-        cardElement.append(cardBodyElement__Button);
+        cardElement.append(cardBodyElement, cardBodyElement__Button);
         cardBodyElement.append(
           cardTitleElement,
           cardSubtitleElement,

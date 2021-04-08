@@ -33,21 +33,21 @@ const buttonPostClass = new Buttons({
 });
 const buttonShowMoreClass = new Buttons({
   elem: "button",
-  className: "btn btn-primary btn-sm mb-1",
+  className: "btn btn-primary btn-sm ",
   type: "button",
   textContent: "Показать больше",
 });
 
 const buttonHideInfoClass = new Buttons({
   elem: "button",
-  className: "btn btn-hide-info hide btn-primary btn-sm",
+  className: "btn btn-hide-info hide btn-primary btn-sm ",
   type: "button",
   textContent: "Скрить",
 });
 
 const buttonEditClass = new Buttons({
   elem: "button",
-  className: "btn btn-primary btn-sm mb-2",
+  className: "btn btn-primary btn-sm ",
   type: "button",
   textContent: "Редактировать",
 });

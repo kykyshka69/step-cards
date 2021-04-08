@@ -25,7 +25,15 @@ const buttonCreateClass = new Buttons({
   textContent: "CreateVisit",
 });
 
+const buttonPostClass = new Buttons({
+  elem: "button",
+  className: "btn btn-post btn-primary",
+  type: "submit",
+  textContent: "Создать Визит",
+});
+
 const buttonLoginElement = buttonLoginClass.render();
 const buttonSubmitElement = buttonSubmitClass.render();
 const buttonCloseElement = buttonCloseClass.render();
 const buttonCreateElement = buttonCreateClass.render();
+const buttonPostElement = buttonPostClass.render();

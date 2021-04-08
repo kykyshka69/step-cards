@@ -11,9 +11,7 @@ function getCard() {
     })
     .then((data) => {
       const main = document.querySelector(".main-container");
-
-      data.forEach((item, i) => {
-        console.log(item)
+      data.map((item, i) => {
         const {
           doctor = "",
           purpose = "",
@@ -25,8 +23,17 @@ function getCard() {
           cardioVascular = "",
           age = "",
           lastVisit = "",
-          id,
         } = item;
+        let arr = [
+          purpose,
+          description,
+          urgency,
+          pressure,
+          IndexBodyMass,
+          cardioVascular,
+          age,
+          lastVisit,
+        ];
         const cardElement = cardClass.render();
         cardElement.style.width = "18rem";
         const cardBodyElement = cardClass.renderCardBody();
@@ -36,6 +43,7 @@ function getCard() {
         const buttonShowMoreElement = buttonShowMoreClass.render();
         main.append(cardElement);
         cardElement.append(cardBodyElement);
+
         cardBodyElement.append(
           cardTitleElement,
           cardSubtitleElement,
@@ -44,6 +52,11 @@ function getCard() {
         );
         cardTitleElement.textContent = doctor;
         cardSubtitleElement.textContent = fullName;
+        arr.forEach((el, i) => {
+          const cardTextElement = cardClass.renderCardText();
+          cardTextElement.textContent = el;
+          cardBodyElement.append(cardTextElement);
+        });
         buttonShowMoreElement.onclick = () => {};
       });
     });

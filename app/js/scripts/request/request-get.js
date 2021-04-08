@@ -27,6 +27,7 @@ function getCard() {
           lastVisit = "",
           id,
         } = item;
+        
       });
     });
 }

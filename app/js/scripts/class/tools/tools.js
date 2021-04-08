@@ -10,7 +10,7 @@ class Tools {
   renderPage() {
     const wrapper = this.createElement("div");
     wrapper.className = "header navbar navbar-expand-lg navbar-light bg-light";
-    wrapper.append(this.renderHeader(), this.renderFooter());
+    wrapper.append(this.renderHeader());
     return wrapper;
   }
   renderHeader() {
@@ -40,6 +40,7 @@ class Tools {
     container.className = "main-container";
     return container;
   }
+
 
   renderFooter() {
     const footer = this.createElement();

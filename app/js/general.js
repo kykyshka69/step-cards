@@ -33,7 +33,8 @@
 @@include("scripts/request/request-login.js");
 @@include("scripts/request/request-posts.js");
 @@include("scripts/request/request-get.js");
-
+@@include("scripts/class/cards/cards.js");
+@@include("scripts/class/cards/cards-objects.js");
 if (localStorage.getItem("token") !== "noid" && localStorage.getItem("token")) {
   buttonLoginElement.style.display = "none";
   buttonCreateElement.style.display = "block";

@@ -14,9 +14,9 @@ buttonLoginElement.onclick = () => {
 
 buttonCreateElement.onclick = (e) => {
   document.querySelector(".background-popup").classList.add("popup__active");
-  document.querySelector(".modal-body").innerHTML = "";
-  document.querySelector(".modal-body").append(chooseDoctorsElement);
-  document.querySelector(".modal-title").textContent = "Choose Doctors";
+  modalBodyElement.innerHTML = "";
+  modalBodyElement.append(chooseDoctorsElement);
+  modalTitleElement.textContent = "Choose Doctors";
   buttonSubmitElement.remove();
-  document.querySelector(".modal-header").append(buttonCloseElement);
+  modalHeaderElement.append(buttonCloseElement);
 };

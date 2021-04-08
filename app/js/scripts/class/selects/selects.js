@@ -25,6 +25,7 @@ class Select extends Tools {
   renderOptionCardiologist() {
     const optionCardiologist = document.createElement("option");
     optionCardiologist.textContent = "Кардиолог";
+    optionCardiologist.value = "cardiologist";
     return optionCardiologist;
   }
   renderOptionDentist() {

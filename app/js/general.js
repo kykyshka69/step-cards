@@ -32,6 +32,7 @@
 @@include("scripts/components/modal/modal.js");
 @@include("scripts/request/request-login.js");
 @@include("scripts/request/request-posts.js");
+@@include("scripts/request/request-get.js");
 
 if (localStorage.getItem("token") !== "noid" && localStorage.getItem("token")) {
   buttonLoginElement.style.display = "none";

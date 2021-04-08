@@ -1,9 +1,6 @@
-buttonPostElement.onclick = (e) => {
-  e.preventDefault();
+buttonPostElement.onclick = () => {
   document.querySelector(".background-popup").classList.remove("popup__active");
-  modalFooterElement.textContent = "";
-  modalBodyElement.innerHTML = "";
-  chooseDoctorsElement.value = "Выбор доктора";
+
   if (chooseDoctorsElement.value === "Dentist") {
     createPost({
       doctor: "Стоматолог",
@@ -36,6 +33,7 @@ buttonPostElement.onclick = (e) => {
     });
   }
 };
+
 function createPost(body) {
   fetch("https://ajax.test-danit.com/api/v2/cards", {
     method: "POST",

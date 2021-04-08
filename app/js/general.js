@@ -29,5 +29,11 @@
 @@include("scripts/components/header/header.js");
 @@include("scripts/components/main/main.js");
 @@include("scripts/components/footer/footer.js");
+@@include("scripts/request/request-login.js");
 
-@@include("scripts/request/request-login.js")
+if (localStorage.getItem("token") !== "noid" && localStorage.getItem("token")) {
+  buttonLoginElement.style.display = "none";
+  buttonCreateElement.style.display = "block";
+} else {
+  buttonLoginElement.style.display = "block";
+}

@@ -55,7 +55,10 @@ function getCard() {
         arr.forEach((el, i) => {
           const cardTextElement = cardClass.renderCardText();
           cardTextElement.textContent = el;
-          cardBodyElement.append(cardTextElement);
+          cardSubtitleElement.insertAdjacentElement(
+            "afterend",
+            cardTextElement
+          );
         });
         buttonShowMoreElement.onclick = () => {};
       });

@@ -1,2 +1,2 @@
-const visitClass = new Visit();
-const visitElement = visitClass.render();
+// const visitClass = new Visit();
+// const visitElement = visitClass.render();

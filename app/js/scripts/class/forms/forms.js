@@ -13,7 +13,7 @@ class Form extends Tools {
       this.renderHeaderForm(),
       this.renderBodyForm(),
       this.renderFooterForm()
-    )
+    );
     return this.form;
   }
   renderHeaderForm() {
@@ -39,5 +39,4 @@ class Form extends Tools {
     footerModal.append(buttonSubmitElement);
     return footerModal;
   }
-
 }

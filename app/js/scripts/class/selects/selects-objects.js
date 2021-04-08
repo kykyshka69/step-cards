@@ -7,5 +7,3 @@ const chooseUrgencyClass = new Select({
 });
 const chooseUrgencyElement = chooseUrgencyClass.renderSelectChooseUrgency();
 const chooseDoctorsElement = chooseDoctorsClass.renderSelectChooseDoctors();
-
-console.log(chooseUrgencyElement);

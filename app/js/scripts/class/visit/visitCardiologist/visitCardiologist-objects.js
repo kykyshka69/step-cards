@@ -1,2 +1,2 @@
-// const visitCardiologistClass = new VisitCardiologist();
+const visitCardiologistClass = new VisitCardiologist();
 // const visitCardiologistElement = visitCardiologistClass.render();

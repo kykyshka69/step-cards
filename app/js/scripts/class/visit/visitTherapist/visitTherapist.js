@@ -1,11 +1,11 @@
-// class VisitTherapist extends Visit {
-//     constructor() {
-//       super();
-//     }
-//     render() {
-//       fromCreateElement.append(labelAgeElement);
-//       labelAgeElement.append(inputAgeClass.render());
+class VisitTherapist extends Visit {
+  constructor() {
+    super();
+  }
+  render() {
+    modalBodyElement.append(labelAgeElement);
+    labelAgeElement.append(inputAgeClass.render());
 
-//       return fromCreateElement;
-//     }
-//   }
+    return modalBodyElement;
+  }
+}

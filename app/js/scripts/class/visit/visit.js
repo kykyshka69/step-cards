@@ -1,7 +1,7 @@
 class Visit {
   constructor() {}
   render() {
-    formElement.append(
+    modalBodyElement.append(
       labelTargetElement,
       labelDescriptionElement,
       labelFullNameElement,
@@ -12,6 +12,6 @@ class Visit {
     labelDescriptionElement.append(inputDescriptionElement);
     labelFullNameElement.append(inputFullNameElement);
 
-    return formElement;
+    return modalBodyElement;
   }
 }

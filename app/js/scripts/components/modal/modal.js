@@ -21,14 +21,23 @@ chooseDoctorsElement.onchange = (e) => {
     chooseDoctorsElement.value == "Cardiologist" &&
     chooseDoctorsElement.value !== "Выбор доктора"
   ) {
+    modalBodyElement.textContent = "";
     visitClass.render();
+    visitCardiologistClass.render();
   } else if (
     chooseDoctorsElement.value == "Dentist" &&
     chooseDoctorsElement.value !== "Выбор доктора"
   ) {
+    modalBodyElement.textContent = "";
+    visitClass.render();
+
+    visitDentistClass.render();
   } else if (
     chooseDoctorsElement.value == "Therapist" &&
     chooseDoctorsElement.value !== "Выбор доктора"
   ) {
+    modalBodyElement.textContent = "";
+    visitClass.render();
+    visitTherapistClass.render();
   }
 };

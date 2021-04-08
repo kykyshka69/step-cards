@@ -4,7 +4,7 @@ class VisitTherapist extends Visit {
   }
   render() {
     modalBodyElement.append(labelAgeElement);
-    labelAgeElement.append(inputAgeClass.render());
+    labelAgeElement.append(inputAgeElement);
 
     return modalBodyElement;
   }

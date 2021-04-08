@@ -9,10 +9,10 @@ class VisitCardiologist extends Visit {
       labelAgeElement,
       labelTextAreaElement
     );
-    labelPressureElement.append(inputPressureClass.render());
-    labelTextAreaElement.append(textAreaClass.render());
-    labelWeightElement.append(inputWeightClass.render());
-    labelAgeElement.append(inputAgeClass.render());
+    labelPressureElement.append(inputPressureElement);
+    labelTextAreaElement.append(textAreaElement);
+    labelWeightElement.append(inputWeightElement);
+    labelAgeElement.append(inputAgeElement);
     return modalBodyElement;
   }
 }

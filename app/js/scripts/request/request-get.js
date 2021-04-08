@@ -39,9 +39,9 @@ function getCard() {
         cardElement.style.width = "18rem";
         const cardBodyElement = cardClass.renderCardBody();
         const cardBodyElement__Content = cardClass.renderCardBody();
-        cardBodyElement.insertAdjacentElement("afterend", cardBodyElement__Content);
+        cardBodyElement__Content.className = "test";
         const cardBodyElement__Button = cardClass.renderCardBody();
-        cardBodyElement__Button.className = "d-grid gap-2"
+        cardBodyElement__Button.className = "d-grid gap-2";
         const cardTitleElement = cardClass.renderCardTitle();
         const cardSubtitleElement = cardClass.renderCardSubtitle();
         const buttonEditElement = buttonEditClass.render();
@@ -50,7 +50,11 @@ function getCard() {
         main.append(cardElement);
         cardElement.append(cardBodyElement);
         cardElement.append(cardBodyElement__Button);
-        cardBodyElement.append(cardTitleElement, cardSubtitleElement);
+        cardBodyElement.append(
+          cardTitleElement,
+          cardSubtitleElement,
+          cardBodyElement__Content
+        );
         cardBodyElement__Button.append(
           buttonShowMoreElement,
           buttonHideInfoElement,
@@ -72,9 +76,6 @@ function getCard() {
             buttonHideInfoElement.onclick = (e) => {
               buttonHideInfoElement.classList.add("hide");
               buttonShowMoreElement.classList.remove("hide");
-              document
-                .getElementsByClassName(".card-text")
-                .classList.add("hide");
             };
           });
         };

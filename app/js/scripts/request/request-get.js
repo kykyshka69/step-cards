@@ -67,19 +67,18 @@ function getCard() {
           arr.forEach((el, i) => {
             const cardTextElement = cardClass.renderCardText();
             cardTextElement.textContent = el;
-            cardSubtitleElement.insertAdjacentElement(
-              "afterend",
-              cardTextElement
-            );
+            cardBodyElement__Content.append(cardTextElement);
             buttonShowMoreElement.classList.add("hide");
             buttonHideInfoElement.classList.remove("hide");
             buttonHideInfoElement.onclick = (e) => {
               buttonHideInfoElement.classList.add("hide");
               buttonShowMoreElement.classList.remove("hide");
+              cardBodyElement__Content.textContent = "";
             };
           });
         };
       });
     });
 }
+
 getCard();

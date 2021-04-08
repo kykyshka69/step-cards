@@ -10,9 +10,8 @@ function getCard() {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       const main = document.querySelector(".main-container");
-      console.log(main);
+
       data.forEach((item, i) => {
         const {
           doctor = "",
@@ -27,7 +26,18 @@ function getCard() {
           lastVisit = "",
           id,
         } = item;
-        
+        const cardBodyElement = cardBodyClass.render();
+        const cardTitleElement = cardBodyClass.renderCardTitle();
+        const cardSubtitleElement = cardBodyClass.renderCardSubtitle();
+        main.append(cardBodyElement);
+        cardBodyElement.append(
+          cardTitleElement,
+          cardSubtitleElement,
+          buttonShowMoreClass.render(),
+          buttonEditClass.render()
+        );
+        cardTitleElement.textContent = doctor;
+        cardSubtitleElement.textContent = fullName;
       });
     });
 }

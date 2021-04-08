@@ -6,13 +6,7 @@ class Cards extends Tools {
   render() {
     const cardBody = this.createElement();
     cardBody.className = this.className;
-    cardBody.append(
-      this.renderCardTitle(),
-      this.renderCardSubtitle(),
-      this.renderCardText(),
-      buttonShowMoreElement,
-      buttonEditElement
-    );
+
     return cardBody;
   }
   renderCardTitle() {

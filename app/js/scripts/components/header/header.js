@@ -6,4 +6,9 @@ logo.style.cursor = " pointer";
 headerLogo.append(logo);
 header.append(buttonLoginElement);
 
-buttonLoginElement.addEventListener(" click", () => {});
+buttonLoginElement.onclick = () => {
+  document.querySelector(".background-popup").classList.add("popup__active");
+  buttonLoginElement.style.display = "none";
+  header.append(buttonCreateElement);
+  buttonCreateElement.style.display = "none";
+};

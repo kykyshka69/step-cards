@@ -1,9 +1,9 @@
 const buttonLoginClass = new Buttons({
-    elem: "a",
-    className: "header-button btn btn-primary",
-    type: "button",
-    textContent: "LOGIN",
-  });
+  elem: "button",
+  className: "header-button btn btn-primary",
+  type: "button",
+  textContent: "LOGIN",
+});
 
 const buttonSubmitClass = new Buttons({
   elem: "button",
@@ -15,7 +15,7 @@ const buttonSubmitClass = new Buttons({
 const buttonCloseClass = new Buttons({
   elem: "button",
   className: "btn-close close-modal",
-  type: "button"
+  type: "button",
 });
 
 const buttonCreateClass = new Buttons({

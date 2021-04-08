@@ -1,8 +1,7 @@
 const modalWindowClass = new Modal({
-    elem: "div",
-    className: "modal",
+  elem: "div",
+  className: "background-popup modal",
 });
 
 const modalWindowElement = modalWindowClass.render();
-console.log(modalWindowElement)
-
+document.body.append(modalWindowElement);

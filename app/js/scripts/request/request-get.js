@@ -29,15 +29,21 @@ function getCard() {
         const cardBodyElement = cardBodyClass.render();
         const cardTitleElement = cardBodyClass.renderCardTitle();
         const cardSubtitleElement = cardBodyClass.renderCardSubtitle();
+        const buttonEditElement = buttonEditClass.render();
+        const buttonShowMoreElement = buttonShowMoreClass.render();
+        const cardTextElement = cardBodyClass.renderCardText();
         main.append(cardBodyElement);
         cardBodyElement.append(
           cardTitleElement,
           cardSubtitleElement,
-          buttonShowMoreClass.render(),
-          buttonEditClass.render()
+          cardTextElement,
+          buttonShowMoreElement,
+          buttonEditElement
         );
         cardTitleElement.textContent = doctor;
         cardSubtitleElement.textContent = fullName;
+
+        buttonShowMoreElement.onclick = () => {};
       });
     });
 }

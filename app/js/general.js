@@ -1,7 +1,8 @@
 @@include("scripts/class/tools/tools.js");
 @@include("scripts/class/buttons/buttons.js");
-@@include("scripts/class/modals/modals.js");
 @@include("scripts/class/forms/forms.js");
+@@include("scripts/class/modals/modals.js");
+
 @@include("scripts/class/options/options.js");
 @@include("scripts/class/inputs/inputs.js");
 @@include("scripts/class/labels/labels.js");
@@ -13,8 +14,9 @@
 @@include("scripts/class/visit/visitTherapist/visitTherapist.js");
 
 @@include("scripts/class/buttons/buttons-objects.js");
-@@include("scripts/class/modals/modals-objects.js");
 @@include("scripts/class/forms/forms-objects.js");
+@@include("scripts/class/modals/modals-objects.js");
+
 @@include("scripts/class/options/options-objects.js");
 @@include("scripts/class/inputs/inputs-objects.js");
 @@include("scripts/class/labels/labels-objects.js");

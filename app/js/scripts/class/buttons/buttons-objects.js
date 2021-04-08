@@ -33,14 +33,15 @@ const buttonPostClass = new Buttons({
 });
 const buttonShowMoreClass = new Buttons({
   elem: "button",
-  className: "btn btn-show-more btn-primary",
+  className: "btn btn-show-more btn-primary btn-sm",
   type: "button",
   textContent: "Показать больше",
 });
 
 const buttonEditClass = new Buttons({
   elem: "button",
-  className: "btn btn-edit-more btn-primary",
+  className: "btn btn-edit-more btn-primary btn-sm",
+  className: "btn btn-primary btn-sm",
   type: "button",
   textContent: "Редактировать",
 });

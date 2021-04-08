@@ -10,12 +10,12 @@ class Visit {
     );
     labelTargetElement.append(inputTargetElement);
     labelDescriptionElement.append(inputDescriptionElement);
-    chooseUrgencyElement.append(
-      optionChooseUrgencyElement,
-      optionRegularElement,
-      optionPriorityElement,
-      optionUrgentElement
-    );
+    // chooseUrgencyElement.append(
+    //   optionChooseUrgencyElement,
+    //   optionRegularElement,
+    //   optionPriorityElement,
+    //   optionUrgentElement
+    // );
     labelFullNameElement.append(inputFullNameElement);
 
     return formElement;

@@ -13,7 +13,6 @@ function getCard() {
       const main = document.querySelector(".main-container");
       main.className = "row";
       data.forEach((item, i) => {
-        console.log(item)
         const {
           doctor = "",
           purpose = "",
@@ -40,33 +39,43 @@ function getCard() {
         cardElement.style.width = "18rem";
         const cardBodyElement = cardClass.renderCardBody();
         const cardBodyElement__Button = cardClass.renderCardBody();
-        cardBodyElement__Button.className = "d-grid gap-2 mx-auto"
+        cardBodyElement__Button.className = "d-grid gap-2";
         const cardTitleElement = cardClass.renderCardTitle();
         const cardSubtitleElement = cardClass.renderCardSubtitle();
         const buttonEditElement = buttonEditClass.render();
         const buttonShowMoreElement = buttonShowMoreClass.render();
+        const buttonHideInfoElement = buttonHideInfoClass.render();
         main.append(cardElement);
         cardElement.append(cardBodyElement);
         cardElement.append(cardBodyElement__Button);
-        cardBodyElement.append(
-          cardTitleElement,
-          cardSubtitleElement,
-        );
+        cardBodyElement.append(cardTitleElement, cardSubtitleElement);
         cardBodyElement__Button.append(
           buttonShowMoreElement,
+          buttonHideInfoElement,
           buttonEditElement
-        )
+        );
         cardTitleElement.textContent = doctor;
         cardSubtitleElement.textContent = fullName;
-        arr.forEach((el, i) => {
-          const cardTextElement = cardClass.renderCardText();
-          cardTextElement.textContent = el;
-          cardSubtitleElement.insertAdjacentElement(
-            "afterend",
-            cardTextElement
-          );
-        });
-        buttonShowMoreElement.onclick = () => {};
+
+        buttonShowMoreElement.onclick = (e) => {
+          arr.forEach((el, i) => {
+            const cardTextElement = cardClass.renderCardText();
+            cardTextElement.textContent = el;
+            cardSubtitleElement.insertAdjacentElement(
+              "afterend",
+              cardTextElement
+            );
+            buttonShowMoreElement.classList.add("hide");
+            buttonHideInfoElement.classList.remove("hide");
+            buttonHideInfoElement.onclick = (e) => {
+              buttonHideInfoElement.classList.add("hide");
+              buttonShowMoreElement.classList.remove("hide");
+              document
+                .getElementsByClassName(".card-text")
+                .classList.add("hide");
+            };
+          });
+        };
       });
     });
 }

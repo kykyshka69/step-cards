@@ -38,6 +38,13 @@ const buttonShowMoreClass = new Buttons({
   textContent: "Показать больше",
 });
 
+const buttonHideInfoClass = new Buttons({
+  elem: "button",
+  className: "btn btn-hide-info hide btn-primary btn-sm",
+  type: "button",
+  textContent: "Скрить",
+});
+
 const buttonEditClass = new Buttons({
   elem: "button",
   className: "btn btn-edit-more btn-primary btn-sm",
@@ -52,3 +59,4 @@ const buttonCreateElement = buttonCreateClass.render();
 const buttonPostElement = buttonPostClass.render();
 const buttonShowMoreElement = buttonShowMoreClass.render();
 const buttonEditElement = buttonEditClass.render();
+const buttonHideInfoElement = buttonHideInfoClass.render();

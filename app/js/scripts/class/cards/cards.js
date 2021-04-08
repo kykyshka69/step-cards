@@ -9,7 +9,7 @@ class Cards extends Tools {
     return cardBody;
   }
 
-  renderCardBody(){
+  renderCardBody() {
     const card = document.createElement("div");
     card.className = "card-body";
     return card;

@@ -4,4 +4,4 @@ const modalWindowClass = new Modal({
 });
 
 const modalWindowElement = modalWindowClass.render();
-document.body.append(modalWindowElement);
+document.body.prepend(modalWindowElement);

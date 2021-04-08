@@ -6,4 +6,44 @@ class Tools {
     let elem = document.createElement(`${this.elem}`);
     return elem;
   }
+
+  renderPage() {
+    const wrapper = this.createElement("div");
+    wrapper.className = "wrapper";
+    wrapper.append(this.renderHeader(), this.renderMain(), this.renderFooter());
+    return wrapper;
+  }
+  renderHeader() {
+    const header = this.createElement();
+    header.className = "header";
+    header.append(
+      this.renderHeaderLogo(),
+      buttonLoginElement,
+      buttonCreateElement
+    );
+    return header;
+  }
+  renderHeaderLogo() {
+    const headerLogo = this.createElement();
+    headerLogo.className = "header-logo";
+    return headerLogo;
+  }
+  renderMain() {
+    const main = this.createElement();
+    main.className = "main";
+    main.append(this.renderMainContainer());
+    return main;
+  }
+
+  renderMainContainer() {
+    const container = this.createElement();
+    container.className = "main-container";
+
+    return container;
+  }
+  renderFooter() {
+    const footer = this.createElement();
+    footer.className = "footer";
+    return footer;
+  }
 }

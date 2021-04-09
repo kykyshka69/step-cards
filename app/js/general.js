@@ -27,7 +27,7 @@
 @@include("scripts/class/visit/visitTherapist/visitTherapist-objects.js");
 @@include("scripts/class/tools/tools-objects.js");
 @@include("scripts/class/cards/cards-objects.js");
-@@include("scripts/request/request-delete.js");
+
 @@include("scripts/components/header/header.js");
 @@include("scripts/components/main/main.js");
 @@include("scripts/components/footer/footer.js");
@@ -35,7 +35,7 @@
 @@include("scripts/request/request-login.js");
 @@include("scripts/request/request-posts.js");
 @@include("scripts/request/request-get.js");
-@@include("scripts/request/request-edit.js");
+
 
 if (localStorage.getItem("token") !== "noid" && localStorage.getItem("token")) {
   buttonLoginElement.style.display = "none";

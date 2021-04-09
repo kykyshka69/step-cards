@@ -66,6 +66,21 @@ const buttonEditCardClass = new Buttons({
   textContent: "Save",
 });
 
+const buttonShowMoreClass = new Buttons({
+  elem: "button",
+  className: "btn btn-show-more btn-primary",
+  type: "button",
+  textContent: "Показать больше",
+});
+
+const buttonEditClass = new Buttons({
+  elem: "button",
+  className: "btn btn-edit btn-primary",
+  type: "button",
+  textContent: "Редактировать",
+});
+
+
 const buttonLoginElement = buttonLoginClass.render();
 const buttonSubmitElement = buttonSubmitClass.render();
 const buttonCloseElement = buttonCloseClass.render();

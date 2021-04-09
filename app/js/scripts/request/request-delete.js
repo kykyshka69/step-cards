@@ -1,4 +1,4 @@
-class Cards extends Tools {
+class Test extends Tools {
   constructor({ elem, className }) {
     super(elem);
     this.className = className;
@@ -6,20 +6,24 @@ class Cards extends Tools {
   render() {
     const card = this.createElement();
     card.className = this.className;
-    card.append(this.renderCardBody(), this.renderCardButtonContainer())
+    card.append(this.renderCardBody(), this.renderCardButtonContainer());
     return card;
   }
 
   renderCardBody() {
     const cardBody = document.createElement("div");
     cardBody.className = "card-body col";
-    cardBody.append(this.renderCardTitle(), this.renderCardSubtitle(),this.renderCardContent())
+    cardBody.append(
+      this.renderCardTitle(),
+      this.renderCardSubtitle(),
+      this.renderCardContent()
+    );
     return cardBody;
   }
   renderCardContent() {
     const cardContent = this.createElement();
     cardContent.className = "card-body-content  hide";
-    cardContent.append(this.renderCardText())
+    cardContent.append(this.renderCardText());
     return cardContent;
   }
   renderCardTitle() {
@@ -37,12 +41,19 @@ class Cards extends Tools {
     cardText.className = "card-text";
     return cardText;
   }
-  renderCardButtonContainer(){
+  renderCardButtonContainer() {
     const cardButtonFooter = this.createElement();
     cardButtonFooter.className = "modal-footer";
-    cardButtonFooter.append(buttonShowMoreElement,
+    cardButtonFooter.append(
+      buttonShowMoreElement,
       buttonHideInfoElement,
-      buttonEditElement)
+      buttonEditElement
+    );
     return cardButtonFooter;
   }
 }
+const test = new Test({
+  elem: "div",
+  className: "card m-3 shadow",
+});
+console.log(test.render());

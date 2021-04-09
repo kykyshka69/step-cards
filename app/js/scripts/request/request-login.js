@@ -20,7 +20,7 @@ buttonSubmitElement.onclick = () => {
         document
           .querySelector(".background-popup")
           .classList.remove("popup__active");
-        location.reload()
+        location.reload();
 
         return response.text();
       }

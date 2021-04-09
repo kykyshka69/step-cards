@@ -36,7 +36,7 @@
 @@include("scripts/request/request-posts.js");
 @@include("scripts/request/request-get.js");
 @@include("scripts/request/request-edit.js");
-
+@@include("scripts/request/request-delete.js");
 if (localStorage.getItem("token") !== "noid" && localStorage.getItem("token")) {
   buttonLoginElement.style.display = "none";
   buttonCreateElement.style.display = "block";

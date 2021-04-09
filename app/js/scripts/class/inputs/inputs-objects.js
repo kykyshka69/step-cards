@@ -42,7 +42,7 @@ const inputAgeClass = new Input({
   name: "age",
   className: "input-age form-control",
   type: "text",
-  placeholder: "Your age",
+  placeholder: "Ваш возраст",
   elem: "input",
 });
 

@@ -1,5 +1,5 @@
-buttonPostElement.onclick = (e) => {
-  e.preventDefault();
+buttonPostElement.onclick = () => {
+  modalBodyElement.innerHTML = "";
   document.querySelector(".background-popup").classList.remove("popup__active");
 
   if (chooseDoctorsElement.value === "Dentist") {
@@ -46,8 +46,8 @@ function createPost(body) {
   })
     .then((response) => {
       if (response.status === 200) {
-        alert('Карточка создана')
-        location.reload()
+        alert("Карточка создана");
+        location.reload();
         return response.text();
       }
     })

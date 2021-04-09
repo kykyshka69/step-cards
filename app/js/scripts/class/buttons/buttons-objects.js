@@ -56,14 +56,14 @@ const buttonDeleteClass = new Buttons({
   elem: "button",
   className: "btn btn-danger mb2",
   type: "button",
-  textContent: "Delete"
-})
+  textContent: "Delete",
+});
 
 const buttonEditCardClass = new Buttons({
   elem: "button",
   className: "btn btn-primary mb-2",
   type: "button",
-  textContent: "Edit",
+  textContent: "Save",
 });
 
 const buttonLoginElement = buttonLoginClass.render();

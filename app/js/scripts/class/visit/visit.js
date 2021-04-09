@@ -6,7 +6,7 @@ class Visit {
       labelDescriptionElement,
       labelFullNameElement,
       labelDescriptionElement,
-      chooseUrgencyElement,
+      chooseUrgencyElement
     );
     modalFooterElement.append(buttonPostElement);
     labelTargetElement.append(inputTargetElement);

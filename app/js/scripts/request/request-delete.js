@@ -11,8 +11,8 @@ class Test extends Tools {
   }
 
   renderCardBody() {
-    const cardBody = document.createElement("div");
-    cardBody.className = "card-body col";
+    const cardBody = this.createElement();
+    cardBody.className = "card-body test col";
     cardBody.append(
       this.renderCardTitle(),
       this.renderCardSubtitle(),
@@ -56,4 +56,4 @@ const test = new Test({
   elem: "div",
   className: "card m-3 shadow",
 });
-console.log(test.render());
+

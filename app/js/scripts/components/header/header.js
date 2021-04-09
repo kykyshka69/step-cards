@@ -13,6 +13,7 @@ buttonLoginElement.onclick = () => {
 };
 
 buttonCreateElement.onclick = (e) => {
+  chooseDoctorsElement.disabled = false;
   document.querySelector(".background-popup").classList.add("popup__active");
   modalBodyElement.innerHTML = "";
   modalBodyElement.append(chooseDoctorsElement);

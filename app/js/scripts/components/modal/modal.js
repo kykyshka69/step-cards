@@ -3,6 +3,9 @@ const modalTitleElement = document.querySelector(".modal-title");
 const modalHeaderElement = document.querySelector(".modal-header");
 const modalFooterElement = document.querySelector(".modal-footer");
 buttonCloseElement.onclick = (e) => {
+e.preventDefault();
+  modalWindowElement.remove();
+  document.body.append(modalWindowElement);
   modalFooterElement.innerHTML = "";
   modalBodyElement.innerHTML = "";
   document.querySelector(".background-popup").classList.remove("popup__active");

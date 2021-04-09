@@ -37,26 +37,27 @@ function getCard() {
           age,
           lastVisit,
         ];
+
         const cardElement = cardClass.render();
-        // cardElement.style.width = "18rem";
         const cardBodyElement = cardClass.renderCardBody();
         const cardTitleElement = cardClass.renderCardTitle();
         const cardSubtitleElement = cardClass.renderCardSubtitle();
         cardTitleElement.textContent = doctor;
         cardSubtitleElement.textContent = fullName;
-        cardBodyElement.append(cardTitleElement, cardSubtitleElement);
         const cardBodyElement__Content = cardClass.renderCardBody();
-        cardBodyElement.append(cardBodyElement__Content);
-        cardBodyElement__Content.className = "card-body-content";
-        cardBodyElement__Content.style.display = "none";
+        cardBodyElement.append(
+          cardTitleElement,
+          cardSubtitleElement,
+          cardBodyElement__Content
+        );
+        cardBodyElement__Content.className = "card-body-content hide";
         const cardBodyElement__Button = cardClass.renderCardBody();
         cardBodyElement__Button.className = "modal-footer";
         const buttonEditElement = buttonEditClass.render();
         const buttonShowMoreElement = buttonShowMoreClass.render();
         const buttonHideInfoElement = buttonHideInfoClass.render();
         main.append(cardElement);
-        cardElement.append(cardBodyElement);
-        cardElement.append(cardBodyElement__Button);
+        cardElement.append(cardBodyElement, cardBodyElement__Button);
         cardBodyElement__Button.append(
           buttonShowMoreElement,
           buttonHideInfoElement,

@@ -11,19 +11,22 @@ buttonSubmitElement.onclick = () => {
   })
     .then((response) => {
       console.log(response.status);
-      if (response.status == 401 ) {
+      if (response.status == 401) {
         alert("Incorrect Login or Password");
         return "noid";
       } else if (response.status == 200) {
         buttonLoginElement.style.display = "none";
         buttonCreateElement.style.display = "block";
-        document.querySelector(".background-popup").classList.remove("popup__active");
+        document
+          .querySelector(".background-popup")
+          .classList.remove("popup__active");
         location.reload()
+
         return response.text();
       }
     })
     .then((data) => {
-      if (data !== undefined){
+      if (data !== undefined) {
         localStorage.setItem("token", data);
       }
     });

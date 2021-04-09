@@ -1,4 +1,5 @@
-buttonPostElement.onclick = () => {
+buttonPostElement.onclick = (e) => {
+  e.defaultPrevented = true;
   modalBodyElement.innerHTML = "";
   document.querySelector(".background-popup").classList.remove("popup__active");
 
@@ -48,6 +49,7 @@ function createPost(body) {
       if (response.status === 200) {
         alert("Карточка создана");
         location.reload();
+        // getCard();
         return response.text();
       }
     })

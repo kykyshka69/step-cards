@@ -1,16 +1,7 @@
 const fromClass = new Form({
   action: "#",
-  name: "fromAutorization",
+  name: "from",
   className: "popup-form modal-content",
   elem: "form",
 });
-
-// const fromCreateClass = new Form({
-//   action: "#",
-//   name: "fromCreate",
-//   className: "popup-form modal-content",
-//   elem: "form",
-// });
-
-// const fromCreateElement = fromCreateClass.render();
 const formElement = fromClass.render();

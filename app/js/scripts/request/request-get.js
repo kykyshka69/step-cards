@@ -38,7 +38,7 @@ function getCard() {
           lastVisit,
         ];
         const cardElement = cardClass.render();
-        cardElement.style.width = "18rem";
+        // cardElement.style.width = "18rem";
         const cardBodyElement = cardClass.renderCardBody();
         const cardTitleElement = cardClass.renderCardTitle();
         const cardSubtitleElement = cardClass.renderCardSubtitle();
@@ -119,8 +119,8 @@ function getCard() {
             inputAgeElement.value = age;
           }
         };
-        buttonDeleteElement.onclick = (event) => {
-          event.preventDefault();
+
+        buttonDeleteElement.onclick = (e) => {
           fetch(`https://ajax.test-danit.com/api/v2/cards/${id}`, {
             method: "DELETE",
             headers: {
@@ -131,12 +131,13 @@ function getCard() {
             if (response.status == 200) {
               alert("Карточка удалена");
               location.reload();
+              cardElement.classList.add("hide");
             }
           });
           document
             .querySelector(".background-popup")
             .classList.remove("popup__active");
-          formElement.innerHTML = "";
+          // formElement.remove();
         };
         function putPost(body) {
           fetch(`https://ajax.test-danit.com/api/v2/cards/${id}`, {
@@ -151,7 +152,7 @@ function getCard() {
               if (response.status === 200) {
                 alert("Карточка изменена");
 
-                // location.reload();
+                location.reload();
                 return response.text();
               }
             })
@@ -197,5 +198,4 @@ function getCard() {
       });
     });
 }
-
 getCard();

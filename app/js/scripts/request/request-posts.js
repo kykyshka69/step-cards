@@ -1,7 +1,6 @@
 buttonPostElement.onclick = (e) => {
   modalBodyElement.innerHTML = "";
-  alert();
-  document.querySelector(".background-popup").classList.remove("popup__active");
+  modalGeneralElement.classList.remove("popup__active");
 
   if (chooseDoctorsElement.value === "Dentist") {
     createPost({

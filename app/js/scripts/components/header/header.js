@@ -21,3 +21,9 @@ buttonCreateElement.onclick = (e) => {
   buttonSubmitElement.remove();
   modalHeaderElement.append(buttonCloseElement);
 };
+
+document.addEventListener("click", (e) => {
+  if (e.target === modalGeneralElement) {
+    modalGeneralElement.classList.remove("popup__active");
+  }
+});

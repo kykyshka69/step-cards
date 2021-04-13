@@ -1,7 +1,4 @@
 buttonPostElement.onclick = (e) => {
-  modalBodyElement.innerHTML = "";
-  modalGeneralElement.classList.remove("popup__active");
-
   if (chooseDoctorsElement.value === "Dentist") {
     createPost({
       doctor: "Стоматолог",
@@ -33,6 +30,10 @@ buttonPostElement.onclick = (e) => {
       fullName: inputFullNameElement.value,
     });
   }
+  modalBodyElement.innerHTML = "";
+  modalFooterElement.innerHTML = "";
+  modalGeneralElement.classList.remove("popup__active");
+  chooseDoctorsElement.value = "Выбор доктора";
 };
 
 function createPost(body) {

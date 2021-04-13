@@ -138,7 +138,8 @@ function getCard() {
           document
             .querySelector(".background-popup")
             .classList.remove("popup__active");
-          // formElement.remove();
+          modalFooterElement.innerHTML = "";
+          chooseDoctorsElement.value = "Выбор доктора";
         };
         function putPost(body) {
           fetch(`https://ajax.test-danit.com/api/v2/cards/${id}`, {

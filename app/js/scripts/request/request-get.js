@@ -11,7 +11,7 @@ function getCard() {
       return response.json();
     })
     .then((data) => {
-      main.className = "row justify-content-md-center gap-auto";
+      main.className = "main-cards row justify-content-md-center gap-auto";
       data.forEach((item, i) => {
         const {
           id = "",

@@ -3,15 +3,35 @@ class Filter extends Tools {
     super(elem);
     this.className = className;
   }
+  renderInputFilter() {
+    const inputFilter = document.createElement("input");
+    (inputFilter.name = "search"),
+      (inputFilter.className = "input-search form-control");
+    inputFilter.type = "text";
+    inputFilter.placeholder = "Поиск";
+    return inputFilter;
+  }
+  renderLabelFilter() {
+    const labelFilter = document.createElement("label");
+    labelFilter.className = "label-filter input-gorup mb-3";
+    labelFilter.name = "label-filter";
+    labelFilter.append(this.renderInputFilter());
+    return labelFilter;
+  }
   render() {
     const filter = this.createElement();
-    const titleFilter = document.createElement("h5");
+    const titleFilter = document.createElement("span");
     titleFilter.textContent = "Filter";
+    titleFilter.className = "input-group-text";
     filter.className = this.className;
     document.querySelector(".main-filter__container").append(filter);
-    filter.append(titleFilter, labelFilterSearchElement, chooseUrgencyElement);
-    chooseUrgencyElement.classList.add("filter-search-urgency");
-    labelFilterSearchElement.append(inputFilterSearchElement);
+    filter.append(
+      titleFilter,
+      this.renderLabelFilter(),
+      chooseUrgencyFilterElement,
+      buttonFilterSearchElement
+    );
+
     return filter;
   }
 }

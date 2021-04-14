@@ -7,11 +7,6 @@ class Tools {
     return elem;
   }
 
-  createFilter() {
-    let elem = document.createElement(`${this.elem}`);
-    elem.className = "mt-5 card mb-2";
-    return elem;
-  }
   renderPage() {
     const wrapper = this.createElement("div");
     wrapper.className =
@@ -37,7 +32,7 @@ class Tools {
   renderMain() {
     const main = this.createElement();
     main.className = "main";
-    main.append(this.renderMainContainer());
+    main.append(this.renderMainFilterContainer(), this.renderMainContainer());
     return main;
   }
 
@@ -47,6 +42,11 @@ class Tools {
     return container;
   }
 
+  renderMainFilterContainer() {
+    const Filtercontainer = this.createElement();
+    Filtercontainer.className = "main-filter__container";
+    return Filtercontainer;
+  }
   renderFooter() {
     const footer = this.createElement();
     footer.className = "footer";

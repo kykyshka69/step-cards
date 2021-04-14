@@ -150,8 +150,8 @@ function getCard() {
           })
             .then((response) => {
               if (response.status === 200) {
-                alert("Карточка изменена");
-                location.reload();
+                main.textContent = "";
+                getCard();
                 return response.text();
               }
             })

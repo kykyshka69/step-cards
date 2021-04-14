@@ -1,6 +1,7 @@
 const header = document.querySelector(".header");
 const headerLogo = document.querySelector(".header-logo");
 const logo = document.createElement("a");
+
 logo.innerHTML = "The Care Clinic";
 logo.style.cursor = " pointer";
 headerLogo.append(logo);
@@ -13,6 +14,7 @@ buttonLoginElement.onclick = () => {
 };
 
 buttonCreateElement.onclick = (e) => {
+
   chooseDoctorsElement.disabled = false;
   document.querySelector(".background-popup").classList.add("popup__active");
   modalBodyElement.innerHTML = "";
@@ -25,5 +27,8 @@ buttonCreateElement.onclick = (e) => {
 document.addEventListener("click", (e) => {
   if (e.target === modalGeneralElement) {
     modalGeneralElement.classList.remove("popup__active");
+    modalBodyElement.textContent = "";
+    modalFooterElement.textContent = "";
+    chooseDoctorsElement.value = "Выбор доктора";
   }
 });

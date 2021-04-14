@@ -3,6 +3,7 @@ const modalTitleElement = document.querySelector(".modal-title");
 const modalHeaderElement = document.querySelector(".modal-header");
 const modalFooterElement = document.querySelector(".modal-footer");
 const modalGeneralElement = document.querySelector(".background-popup");
+let formInputElements = document.getElementsByTagName("input");
 buttonCloseElement.onclick = (e) => {
   e.preventDefault();
   modalWindowElement.remove();
@@ -23,29 +24,27 @@ buttonCloseElement.onclick = (e) => {
 };
 
 chooseDoctorsElement.onchange = (e) => {
+  modalBodyElement.textContent = "";
+  modalBodyElement.append(chooseDoctorsElement);
+  visitClass.render();
   if (
     chooseDoctorsElement.value == "Cardiologist" &&
     chooseDoctorsElement.value !== "Выбор доктора"
   ) {
-    modalBodyElement.textContent = "";
-    modalBodyElement.append(chooseDoctorsElement);
-    visitClass.render();
     visitCardiologistClass.render();
   } else if (
     chooseDoctorsElement.value == "Dentist" &&
     chooseDoctorsElement.value !== "Выбор доктора"
   ) {
-    modalBodyElement.textContent = "";
-    modalBodyElement.append(chooseDoctorsElement);
-    visitClass.render();
     visitDentistClass.render();
   } else if (
     chooseDoctorsElement.value == "Therapist" &&
     chooseDoctorsElement.value !== "Выбор доктора"
   ) {
-    modalBodyElement.textContent = "";
-    modalBodyElement.append(chooseDoctorsElement);
-    visitClass.render();
     visitTherapistClass.render();
   }
+  formInputElements = Array.prototype.slice.call(formInputElements);
+  formInputElements.forEach((element) => {
+    element.value = "";
+  });
 };
